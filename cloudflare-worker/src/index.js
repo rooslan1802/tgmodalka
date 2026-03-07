@@ -1,8 +1,13 @@
 import seedChildren from '../data/children.seed.json';
+import { Resvg, initWasm } from '@resvg/resvg-wasm';
+import resvgWasm from '@resvg/resvg-wasm/index_bg.wasm';
+import QRCode from 'qrcode';
 
 const BASE_URL = 'https://damubala.kz';
 const API_URL = `${BASE_URL}/v1`;
 const CHILDREN_KEY = 'children:v1';
+const CHAT_STATE_PREFIX = 'chat-state:v1:';
+let wasmReady = false;
 
 function jsonResponse(payload, status = 200) {
   return new Response(JSON.stringify(payload), {
@@ -118,11 +123,52 @@ async function sendDocument(env, chatId, bytes, fileName, caption = '', contentT
   );
 }
 
+async function sendPhotoBytes(env, chatId, bytes, fileName, caption = '', contentType = 'image/png') {
+  return tgApiMultipart(
+    env,
+    'sendPhoto',
+    {
+      chat_id: chatId,
+      caption
+    },
+    'photo',
+    bytes,
+    fileName,
+    contentType
+  );
+}
+
 async function answerCallback(env, callbackQueryId, text = '') {
   return tgApi(env, 'answerCallbackQuery', {
     callback_query_id: callbackQueryId,
     text
   });
+}
+
+function chatStateKey(chatId) {
+  return `${CHAT_STATE_PREFIX}${chatId}`;
+}
+
+async function loadChatState(env, chatId) {
+  const raw = await env.CHILDREN_KV.get(chatStateKey(chatId));
+  if (!raw) return { paused: false, awaitingQr: false };
+  try {
+    const parsed = JSON.parse(raw);
+    return {
+      paused: Boolean(parsed?.paused),
+      awaitingQr: Boolean(parsed?.awaitingQr)
+    };
+  } catch {
+    return { paused: false, awaitingQr: false };
+  }
+}
+
+async function saveChatState(env, chatId, state) {
+  const payload = {
+    paused: Boolean(state?.paused),
+    awaitingQr: Boolean(state?.awaitingQr)
+  };
+  await env.CHILDREN_KV.put(chatStateKey(chatId), JSON.stringify(payload));
 }
 
 async function sendChatAction(env, chatId, action) {
@@ -133,16 +179,23 @@ async function sendChatAction(env, chatId, action) {
 }
 
 async function loadChildren(env) {
+  const seeded = Array.isArray(seedChildren) ? seedChildren : [];
   const raw = await env.CHILDREN_KV.get(CHILDREN_KEY);
   if (raw) {
     try {
       const parsed = JSON.parse(raw);
-      if (Array.isArray(parsed)) return parsed;
+      if (Array.isArray(parsed)) {
+        const seen = new Set(parsed.map((x) => String(x?.id || '')));
+        const additions = seeded.filter((x) => !seen.has(String(x?.id || '')));
+        if (!additions.length) return parsed;
+        const merged = [...parsed, ...additions];
+        await saveChildren(env, merged);
+        return merged;
+      }
     } catch {
       // fallback to seed
     }
   }
-  const seeded = Array.isArray(seedChildren) ? seedChildren : [];
   await env.CHILDREN_KV.put(CHILDREN_KEY, JSON.stringify(seeded));
   return seeded;
 }
@@ -342,15 +395,10 @@ function buildEgovSignLink({ attendanceId, userId, subscriptionIds }) {
   return `mobileSign:${API_URL}/EgovMobile/mgovSign?id=${attendanceId}&egovMobileSignType=1&userId=${userId}&payload=${payload}`;
 }
 
-function buildQrImageUrl(value) {
-  return `https://api.qrserver.com/v1/create-qr-code/?size=1024x1024&margin=20&data=${encodeURIComponent(value)}`;
-}
-
-async function fetchQrPngBase64(qrUrl) {
-  const res = await fetch(qrUrl);
-  if (!res.ok) throw new Error(`QR fetch failed: HTTP ${res.status}`);
-  const bytes = new Uint8Array(await res.arrayBuffer());
-  return bytesToBase64(bytes);
+async function ensureResvgWasm() {
+  if (wasmReady) return;
+  await initWasm(resvgWasm);
+  wasmReady = true;
 }
 
 function buildModalSvg({ childName, qrPngBase64 }) {
@@ -373,6 +421,25 @@ function buildModalSvg({ childName, qrPngBase64 }) {
   <rect x="245" y="930" width="430" height="86" rx="14" fill="#ff7400"/>
   <text x="322" y="986" fill="#fff" font-size="46" font-weight="700" font-family="Arial, sans-serif">Продолжить</text>
 </svg>`;
+}
+
+async function buildModalPngBytes({ childName, qrValue }) {
+  const qrDataUrl = await QRCode.toDataURL(qrValue, {
+    type: 'image/png',
+    margin: 2,
+    width: 1024,
+    color: { dark: '#000000', light: '#FFFFFF' }
+  });
+  const qrPngBase64 = String(qrDataUrl || '').split(',')[1] || '';
+  if (!qrPngBase64) throw new Error('Не удалось построить QR');
+
+  const svg = buildModalSvg({ childName, qrPngBase64 });
+  await ensureResvgWasm();
+  const resvg = new Resvg(svg, {
+    fitTo: { mode: 'width', value: 920 }
+  });
+  const pngData = resvg.render();
+  return pngData.asPng();
 }
 
 async function generateQr(env, child) {
@@ -430,7 +497,6 @@ async function generateQr(env, child) {
     return {
       success: true,
       qrValue: link,
-      qrUrl: buildQrImageUrl(link),
       passwordUsed: auth.passwordUsed,
       passwordUpdated: auth.passwordUpdated
     };
@@ -442,8 +508,25 @@ async function generateQr(env, child) {
 function buildStartKeyboard() {
   return {
     inline_keyboard: [
-      [{ text: 'Импорт seed базы', callback_data: 'seed_import' }],
-      [{ text: 'Количество детей', callback_data: 'count_children' }]
+      [
+        { text: '🟢 START', callback_data: 'ctrl:start' },
+        { text: '⛔ STOP', callback_data: 'ctrl:stop' }
+      ],
+      [{ text: '🧾 СОЗДАТЬ QR', callback_data: 'ctrl:create' }],
+      [
+        { text: '🔄 ОБНОВИТЬ БАЗУ', callback_data: 'seed_import' },
+        { text: '👥 КОЛ-ВО', callback_data: 'count_children' }
+      ]
+    ]
+  };
+}
+
+function buildReplyKeyboard() {
+  return {
+    keyboard: [
+      [{ text: 'START' }, { text: 'STOP' }],
+      [{ text: 'СОЗДАТЬ QR' }],
+      [{ text: '/import_seed' }, { text: '/count' }]
     ]
   };
 }
@@ -455,14 +538,40 @@ async function handleMessage(env, message) {
 
   if (text === '/start') {
     const all = await loadChildren(env);
+    await saveChatState(env, chatId, { paused: false, awaitingQr: false });
     await sendMessage(
       env,
       chatId,
       `Бот готов. Детей в базе: ${all.length}.\n` +
-        '1) Нажмите кнопку "Импорт seed базы" при необходимости.\n' +
-        '2) Напишите имя ребенка и выберите из подсказок.',
-      { reply_markup: buildStartKeyboard() }
+        'Нажмите "СОЗДАТЬ QR" и введите имя ребенка.',
+      {
+        reply_markup: buildStartKeyboard()
+      }
     );
+    await sendMessage(env, chatId, 'Быстрые кнопки:', { reply_markup: buildReplyKeyboard() });
+    return;
+  }
+
+  if (text === 'START') {
+    await saveChatState(env, chatId, { paused: false, awaitingQr: false });
+    await sendMessage(env, chatId, 'Режим запущен. Нажмите "СОЗДАТЬ QR".', { reply_markup: buildStartKeyboard() });
+    return;
+  }
+
+  if (text === 'STOP') {
+    await saveChatState(env, chatId, { paused: true, awaitingQr: false });
+    await sendMessage(env, chatId, 'Режим остановлен. Нажмите START для продолжения.', { reply_markup: buildStartKeyboard() });
+    return;
+  }
+
+  if (text === 'СОЗДАТЬ QR') {
+    const state = await loadChatState(env, chatId);
+    if (state.paused) {
+      await sendMessage(env, chatId, 'Сначала нажмите START.');
+      return;
+    }
+    await saveChatState(env, chatId, { ...state, awaitingQr: true });
+    await sendMessage(env, chatId, 'Введите имя ребенка для поиска.');
     return;
   }
 
@@ -475,6 +584,17 @@ async function handleMessage(env, message) {
   if (text === '/import_seed') {
     const count = await resetChildrenFromSeed(env);
     await sendMessage(env, chatId, `Seed-импорт завершен. Загружено детей: ${count}`);
+    return;
+  }
+
+  const state = await loadChatState(env, chatId);
+  if (state.paused) {
+    await sendMessage(env, chatId, 'Бот на паузе. Нажмите START.');
+    return;
+  }
+
+  if (!state.awaitingQr) {
+    await sendMessage(env, chatId, 'Нажмите кнопку "СОЗДАТЬ QR", затем введите имя ребенка.');
     return;
   }
 
@@ -495,6 +615,7 @@ async function handleMessage(env, message) {
     `Найдено ${found.length}. Выберите ребенка:\n${found.map((x, i) => `${i + 1}. ${x.childName}`).join('\n')}`,
     { reply_markup: { inline_keyboard } }
   );
+  await saveChatState(env, chatId, { ...state, awaitingQr: false });
 }
 
 async function handleCallbackQuery(env, callbackQuery) {
@@ -508,6 +629,32 @@ async function handleCallbackQuery(env, callbackQuery) {
     await answerCallback(env, callbackId, 'Импортирую...');
     const count = await resetChildrenFromSeed(env);
     await sendMessage(env, chatId, `Seed-импорт завершен. Загружено детей: ${count}`);
+    return;
+  }
+
+  if (data === 'ctrl:start') {
+    await answerCallback(env, callbackId, 'Запущено');
+    await saveChatState(env, chatId, { paused: false, awaitingQr: false });
+    await sendMessage(env, chatId, 'Режим запущен. Нажмите "СОЗДАТЬ QR".', { reply_markup: buildStartKeyboard() });
+    return;
+  }
+
+  if (data === 'ctrl:stop') {
+    await answerCallback(env, callbackId, 'Остановлено');
+    await saveChatState(env, chatId, { paused: true, awaitingQr: false });
+    await sendMessage(env, chatId, 'Режим остановлен. Нажмите START для продолжения.', { reply_markup: buildStartKeyboard() });
+    return;
+  }
+
+  if (data === 'ctrl:create') {
+    await answerCallback(env, callbackId, 'Введите имя');
+    const state = await loadChatState(env, chatId);
+    if (state.paused) {
+      await sendMessage(env, chatId, 'Сначала нажмите START.');
+      return;
+    }
+    await saveChatState(env, chatId, { ...state, awaitingQr: true });
+    await sendMessage(env, chatId, 'Введите имя ребенка для поиска.');
     return;
   }
 
@@ -538,7 +685,7 @@ async function handleCallbackQuery(env, callbackQuery) {
 
   try {
     const result = await generateQr(env, child);
-    if (!result.success || !result.qrUrl) {
+    if (!result.success || !result.qrValue) {
       await sendMessage(env, chatId, `Ошибка генерации QR: ${result.message || 'неизвестная ошибка'}`);
       return;
     }
@@ -555,28 +702,17 @@ async function handleCallbackQuery(env, callbackQuery) {
       caption += '\nПароль обновлен на запасной (как в Studia).';
     }
 
-    const qrPngBase64 = await fetchQrPngBase64(result.qrUrl);
-    const modalSvg = buildModalSvg({
+    const modalPngBytes = await buildModalPngBytes({
       childName: child.childName,
-      qrPngBase64
+      qrValue: result.qrValue
     });
-    const modalBytes = new TextEncoder().encode(modalSvg);
-
-    await sendDocument(
+    await sendPhotoBytes(
       env,
       chatId,
-      modalBytes,
-      `modal-${cleanDigits(child.login) || child.id}.svg`,
+      modalPngBytes,
+      `modal-${cleanDigits(child.login) || child.id}.png`,
       caption,
-      'image/svg+xml'
-    );
-
-    await sendPhoto(env, chatId, result.qrUrl, 'QR отдельно (если SVG не открывается)');
-    await sendMessage(
-      env,
-      chatId,
-      `Модалка отправлена файлом SVG.\n${escapeMarkdown('Откройте файл и отсканируйте QR в Egov Mobile')}`,
-      { parse_mode: 'MarkdownV2' }
+      'image/png'
     );
   } catch (error) {
     await sendMessage(env, chatId, `Ошибка генерации QR: ${error?.message || 'неизвестная ошибка'}`);

@@ -6,6 +6,10 @@
     "deploy": "wrangler deploy",
     "dev": "wrangler dev"
   },
+  "dependencies": {
+    "@resvg/resvg-wasm": "^2.6.2",
+    "qrcode": "^1.5.4"
+  },
   "devDependencies": {
     "wrangler": "^4.38.0"
   }

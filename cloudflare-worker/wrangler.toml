@@ -5,3 +5,8 @@ compatibility_date = "2026-03-07"
 [[kv_namespaces]]
 binding = "CHILDREN_KV"
 id = "968badf243554ea09d45199dac4bbfe7"
+
+[[rules]]
+type = "CompiledWasm"
+globs = ["**/*.wasm"]
+fallthrough = true
