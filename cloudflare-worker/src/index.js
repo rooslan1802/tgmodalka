@@ -1,7 +1,6 @@
 import seedChildren from '../data/children.seed.json';
 import { Resvg, initWasm } from '@resvg/resvg-wasm';
 import resvgWasm from '@resvg/resvg-wasm/index_bg.wasm';
-import QRCode from 'qrcode';
 
 const BASE_URL = 'https://damubala.kz';
 const API_URL = `${BASE_URL}/v1`;
@@ -55,6 +54,12 @@ function escapeXml(text) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&apos;');
+}
+
+function childKey(item = {}) {
+  const login = cleanDigits(item.login);
+  const name = normalizeText(item.childName);
+  return `${login}|${name}`;
 }
 
 async function tgApi(env, method, payload) {
@@ -185,19 +190,36 @@ async function loadChildren(env) {
     try {
       const parsed = JSON.parse(raw);
       if (Array.isArray(parsed)) {
-        const seen = new Set(parsed.map((x) => String(x?.id || '')));
-        const additions = seeded.filter((x) => !seen.has(String(x?.id || '')));
-        if (!additions.length) return parsed;
-        const merged = [...parsed, ...additions];
-        await saveChildren(env, merged);
+        const map = new Map();
+        for (const row of parsed) {
+          const key = childKey(row);
+          if (!key) continue;
+          map.set(key, row);
+        }
+        for (const row of seeded) {
+          const key = childKey(row);
+          if (!key) continue;
+          if (!map.has(key)) map.set(key, row);
+        }
+        const merged = [...map.values()];
+        if (merged.length !== parsed.length) {
+          await saveChildren(env, merged);
+        }
         return merged;
       }
     } catch {
       // fallback to seed
     }
   }
-  await env.CHILDREN_KV.put(CHILDREN_KEY, JSON.stringify(seeded));
-  return seeded;
+  const map = new Map();
+  for (const row of seeded) {
+    const key = childKey(row);
+    if (!key) continue;
+    if (!map.has(key)) map.set(key, row);
+  }
+  const uniqueSeed = [...map.values()];
+  await env.CHILDREN_KV.put(CHILDREN_KEY, JSON.stringify(uniqueSeed));
+  return uniqueSeed;
 }
 
 async function saveChildren(env, items) {
@@ -206,8 +228,15 @@ async function saveChildren(env, items) {
 
 async function resetChildrenFromSeed(env) {
   const seeded = Array.isArray(seedChildren) ? seedChildren : [];
-  await saveChildren(env, seeded);
-  return seeded.length;
+  const map = new Map();
+  for (const row of seeded) {
+    const key = childKey(row);
+    if (!key) continue;
+    if (!map.has(key)) map.set(key, row);
+  }
+  const uniqueSeed = [...map.values()];
+  await saveChildren(env, uniqueSeed);
+  return uniqueSeed.length;
 }
 
 function findChildrenByName(all, query, limit = 8) {
@@ -424,13 +453,13 @@ function buildModalSvg({ childName, qrPngBase64 }) {
 }
 
 async function buildModalPngBytes({ childName, qrValue }) {
-  const qrDataUrl = await QRCode.toDataURL(qrValue, {
-    type: 'image/png',
-    margin: 2,
-    width: 1024,
-    color: { dark: '#000000', light: '#FFFFFF' }
-  });
-  const qrPngBase64 = String(qrDataUrl || '').split(',')[1] || '';
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=1024x1024&margin=20&data=${encodeURIComponent(qrValue)}`;
+  const qrResponse = await fetch(qrUrl);
+  if (!qrResponse.ok) {
+    throw new Error(`QR fetch failed: HTTP ${qrResponse.status}`);
+  }
+  const qrBytes = new Uint8Array(await qrResponse.arrayBuffer());
+  const qrPngBase64 = bytesToBase64(qrBytes);
   if (!qrPngBase64) throw new Error('Не удалось построить QR');
 
   const svg = buildModalSvg({ childName, qrPngBase64 });
@@ -527,8 +556,14 @@ function buildReplyKeyboard() {
       [{ text: 'START' }, { text: 'STOP' }],
       [{ text: 'СОЗДАТЬ QR' }],
       [{ text: '/import_seed' }, { text: '/count' }]
-    ]
+    ],
+    resize_keyboard: true,
+    one_time_keyboard: false
   };
+}
+
+async function sendMainKeyboard(env, chatId, text = 'Выберите действие:') {
+  return sendMessage(env, chatId, text, { reply_markup: buildReplyKeyboard() });
 }
 
 async function handleMessage(env, message) {
@@ -548,19 +583,21 @@ async function handleMessage(env, message) {
         reply_markup: buildStartKeyboard()
       }
     );
-    await sendMessage(env, chatId, 'Быстрые кнопки:', { reply_markup: buildReplyKeyboard() });
+    await sendMainKeyboard(env, chatId, 'Быстрые кнопки активированы.');
     return;
   }
 
   if (text === 'START') {
     await saveChatState(env, chatId, { paused: false, awaitingQr: false });
     await sendMessage(env, chatId, 'Режим запущен. Нажмите "СОЗДАТЬ QR".', { reply_markup: buildStartKeyboard() });
+    await sendMainKeyboard(env, chatId);
     return;
   }
 
   if (text === 'STOP') {
     await saveChatState(env, chatId, { paused: true, awaitingQr: false });
     await sendMessage(env, chatId, 'Режим остановлен. Нажмите START для продолжения.', { reply_markup: buildStartKeyboard() });
+    await sendMainKeyboard(env, chatId);
     return;
   }
 
@@ -572,6 +609,7 @@ async function handleMessage(env, message) {
     }
     await saveChatState(env, chatId, { ...state, awaitingQr: true });
     await sendMessage(env, chatId, 'Введите имя ребенка для поиска.');
+    await sendMainKeyboard(env, chatId);
     return;
   }
 
@@ -595,6 +633,7 @@ async function handleMessage(env, message) {
 
   if (!state.awaitingQr) {
     await sendMessage(env, chatId, 'Нажмите кнопку "СОЗДАТЬ QR", затем введите имя ребенка.');
+    await sendMainKeyboard(env, chatId);
     return;
   }
 
@@ -629,6 +668,7 @@ async function handleCallbackQuery(env, callbackQuery) {
     await answerCallback(env, callbackId, 'Импортирую...');
     const count = await resetChildrenFromSeed(env);
     await sendMessage(env, chatId, `Seed-импорт завершен. Загружено детей: ${count}`);
+    await sendMainKeyboard(env, chatId);
     return;
   }
 
@@ -636,6 +676,7 @@ async function handleCallbackQuery(env, callbackQuery) {
     await answerCallback(env, callbackId, 'Запущено');
     await saveChatState(env, chatId, { paused: false, awaitingQr: false });
     await sendMessage(env, chatId, 'Режим запущен. Нажмите "СОЗДАТЬ QR".', { reply_markup: buildStartKeyboard() });
+    await sendMainKeyboard(env, chatId);
     return;
   }
 
@@ -643,6 +684,7 @@ async function handleCallbackQuery(env, callbackQuery) {
     await answerCallback(env, callbackId, 'Остановлено');
     await saveChatState(env, chatId, { paused: true, awaitingQr: false });
     await sendMessage(env, chatId, 'Режим остановлен. Нажмите START для продолжения.', { reply_markup: buildStartKeyboard() });
+    await sendMainKeyboard(env, chatId);
     return;
   }
 
@@ -655,6 +697,7 @@ async function handleCallbackQuery(env, callbackQuery) {
     }
     await saveChatState(env, chatId, { ...state, awaitingQr: true });
     await sendMessage(env, chatId, 'Введите имя ребенка для поиска.');
+    await sendMainKeyboard(env, chatId);
     return;
   }
 
@@ -662,6 +705,7 @@ async function handleCallbackQuery(env, callbackQuery) {
     await answerCallback(env, callbackId, 'Считаю...');
     const all = await loadChildren(env);
     await sendMessage(env, chatId, `В базе ${all.length} детей.`);
+    await sendMainKeyboard(env, chatId);
     return;
   }
 
@@ -714,8 +758,10 @@ async function handleCallbackQuery(env, callbackQuery) {
       caption,
       'image/png'
     );
+    await sendMainKeyboard(env, chatId);
   } catch (error) {
     await sendMessage(env, chatId, `Ошибка генерации QR: ${error?.message || 'неизвестная ошибка'}`);
+    await sendMainKeyboard(env, chatId);
   }
 }
 
