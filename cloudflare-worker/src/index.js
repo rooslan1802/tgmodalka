@@ -554,34 +554,14 @@ async function generateQr(env, child) {
   return { success: false, message: 'Не найдено записей для подписания' };
 }
 
-function buildStartKeyboard() {
-  return {
-    inline_keyboard: [
-      [
-        { text: '🟢 START', callback_data: 'ctrl:start' },
-        { text: '⛔ STOP', callback_data: 'ctrl:stop' }
-      ],
-      [
-        { text: '🔄 ОБНОВИТЬ БАЗУ', callback_data: 'seed_import' },
-        { text: '👥 КОЛ-ВО', callback_data: 'count_children' }
-      ]
-    ]
-  };
-}
-
-function buildReplyKeyboard() {
+function buildPausedKeyboard() {
   return {
     keyboard: [
-      [{ text: 'START' }, { text: 'STOP' }],
-      [{ text: '/import_seed' }, { text: '/count' }]
+      [{ text: 'START' }]
     ],
     resize_keyboard: true,
     one_time_keyboard: false
   };
-}
-
-async function sendMainKeyboard(env, chatId, text = 'Выберите действие:') {
-  return sendMessage(env, chatId, text, { reply_markup: buildReplyKeyboard() });
 }
 
 async function handleMessage(env, message) {
@@ -591,31 +571,28 @@ async function handleMessage(env, message) {
 
   if (text === '/start') {
     const all = await loadChildren(env);
-    await saveChatState(env, chatId, { paused: false, awaitingQr: false });
+    await saveChatState(env, chatId, { paused: true, awaitingQr: false });
     await sendMessage(
       env,
       chatId,
       `Бот готов. Детей в базе: ${all.length}.\n` +
-        'Нажмите START и сразу введите имя ребенка.',
+        'Нажмите START и сразу введите ФИО ребенка.',
       {
-        reply_markup: buildStartKeyboard()
+        reply_markup: buildPausedKeyboard()
       }
     );
-    await sendMainKeyboard(env, chatId, 'Быстрые кнопки активированы.');
     return;
   }
 
   if (text === 'START') {
     await saveChatState(env, chatId, { paused: false, awaitingQr: true });
-    await sendMessage(env, chatId, 'Режим запущен. Введите имя ребенка для поиска.', { reply_markup: buildStartKeyboard() });
-    await sendMainKeyboard(env, chatId);
+    await sendMessage(env, chatId, 'Введите ФИО ребенка для поиска.', { reply_markup: { remove_keyboard: true } });
     return;
   }
 
-  if (text === 'STOP') {
+  if (text === 'STOP' || text === '/stop') {
     await saveChatState(env, chatId, { paused: true, awaitingQr: false });
-    await sendMessage(env, chatId, 'Режим остановлен. Нажмите START для продолжения.', { reply_markup: buildStartKeyboard() });
-    await sendMainKeyboard(env, chatId);
+    await sendMessage(env, chatId, 'Остановлено. Для продолжения нажмите START.', { reply_markup: buildPausedKeyboard() });
     return;
   }
 
@@ -633,13 +610,12 @@ async function handleMessage(env, message) {
 
   const state = await loadChatState(env, chatId);
   if (state.paused) {
-    await sendMessage(env, chatId, 'Бот на паузе. Нажмите START.');
+    await sendMessage(env, chatId, 'Бот на паузе. Нажмите START.', { reply_markup: buildPausedKeyboard() });
     return;
   }
 
   if (!state.awaitingQr) {
-    await sendMessage(env, chatId, 'Нажмите START, затем введите имя ребенка.');
-    await sendMainKeyboard(env, chatId);
+    await sendMessage(env, chatId, 'Нажмите START, затем введите ФИО ребенка.', { reply_markup: buildPausedKeyboard() });
     return;
   }
 
@@ -674,23 +650,6 @@ async function handleCallbackQuery(env, callbackQuery) {
     await answerCallback(env, callbackId, 'Импортирую...');
     const count = await resetChildrenFromSeed(env);
     await sendMessage(env, chatId, `Seed-импорт завершен. Загружено детей: ${count}`);
-    await sendMainKeyboard(env, chatId);
-    return;
-  }
-
-  if (data === 'ctrl:start') {
-    await answerCallback(env, callbackId, 'Запущено');
-    await saveChatState(env, chatId, { paused: false, awaitingQr: true });
-    await sendMessage(env, chatId, 'Режим запущен. Введите имя ребенка для поиска.', { reply_markup: buildStartKeyboard() });
-    await sendMainKeyboard(env, chatId);
-    return;
-  }
-
-  if (data === 'ctrl:stop') {
-    await answerCallback(env, callbackId, 'Остановлено');
-    await saveChatState(env, chatId, { paused: true, awaitingQr: false });
-    await sendMessage(env, chatId, 'Режим остановлен. Нажмите START для продолжения.', { reply_markup: buildStartKeyboard() });
-    await sendMainKeyboard(env, chatId);
     return;
   }
 
@@ -698,7 +657,6 @@ async function handleCallbackQuery(env, callbackQuery) {
     await answerCallback(env, callbackId, 'Считаю...');
     const all = await loadChildren(env);
     await sendMessage(env, chatId, `В базе ${all.length} детей.`);
-    await sendMainKeyboard(env, chatId);
     return;
   }
 
@@ -751,10 +709,8 @@ async function handleCallbackQuery(env, callbackQuery) {
       caption,
       'image/png'
     );
-    await sendMainKeyboard(env, chatId);
   } catch (error) {
     await sendMessage(env, chatId, `Ошибка генерации QR: ${error?.message || 'неизвестная ошибка'}`);
-    await sendMainKeyboard(env, chatId);
   }
 }
 
