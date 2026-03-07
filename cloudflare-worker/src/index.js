@@ -1,6 +1,7 @@
 import seedChildren from '../data/children.seed.json';
 import { Resvg, initWasm } from '@resvg/resvg-wasm';
 import resvgWasm from '@resvg/resvg-wasm/index_bg.wasm';
+import { ARIAL_TTF_BASE64 } from './embeddedFont.js';
 
 const BASE_URL = 'https://damubala.kz';
 const API_URL = `${BASE_URL}/v1`;
@@ -434,21 +435,30 @@ function buildModalSvg({ childName, qrPngBase64 }) {
   const safeName = escapeXml(trimWithEllipsis(childName || ''));
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="920" height="1100" viewBox="0 0 920 1100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @font-face {
+      font-family: "ArialEmbedded";
+      src: url("data:font/ttf;base64,${ARIAL_TTF_BASE64}") format("truetype");
+    }
+    .f {
+      font-family: "ArialEmbedded";
+    }
+  </style>
   <rect width="920" height="1100" fill="#d4ccc1"/>
   <rect x="20" y="24" width="880" height="1030" rx="10" fill="#f4f5f8"/>
-  <text x="104" y="124" fill="#1f2440" font-size="56" font-weight="800" font-family="Arial, sans-serif">Подписание с помощью QR</text>
-  <text x="104" y="190" fill="#7b819b" font-size="42" font-family="Arial, sans-serif">Отсканируйте QR-код с помощью</text>
-  <text x="104" y="240" fill="#7b819b" font-size="42" font-family="Arial, sans-serif">мобильного приложения Egov Mobile</text>
+  <text class="f" x="104" y="124" fill="#1f2440" font-size="56" font-weight="800">Подписание с помощью QR</text>
+  <text class="f" x="104" y="190" fill="#7b819b" font-size="42">Отсканируйте QR-код с помощью</text>
+  <text class="f" x="104" y="240" fill="#7b819b" font-size="42">мобильного приложения Egov Mobile</text>
   <rect x="104" y="282" width="712" height="160" rx="14" fill="#f7dec8" stroke="#f2b17f" stroke-width="2"/>
-  <text x="130" y="334" fill="#1f2440" font-size="26" font-weight="700" font-family="Arial, sans-serif">После подписания в Egov Mobile, можете</text>
-  <text x="130" y="372" fill="#1f2440" font-size="26" font-weight="700" font-family="Arial, sans-serif">нажать на кнопку "Продолжить" или закрыть</text>
-  <text x="130" y="406" fill="#1f2440" font-size="26" font-weight="700" font-family="Arial, sans-serif">модальное окно</text>
-  <text x="104" y="490" fill="#6b7088" font-size="44" font-weight="700" font-family="Arial, sans-serif">${safeName}</text>
-  <text x="850" y="86" fill="#111" font-size="54" font-family="Arial, sans-serif">×</text>
+  <text class="f" x="130" y="334" fill="#1f2440" font-size="26" font-weight="700">После подписания в Egov Mobile, можете</text>
+  <text class="f" x="130" y="372" fill="#1f2440" font-size="26" font-weight="700">нажать на кнопку "Продолжить" или закрыть</text>
+  <text class="f" x="130" y="406" fill="#1f2440" font-size="26" font-weight="700">модальное окно</text>
+  <text class="f" x="104" y="490" fill="#6b7088" font-size="44" font-weight="700">${safeName}</text>
+  <text class="f" x="850" y="86" fill="#111" font-size="54">×</text>
   <rect x="245" y="512" width="430" height="430" fill="#fff"/>
   <image x="245" y="512" width="430" height="430" href="data:image/png;base64,${qrPngBase64}"/>
   <rect x="245" y="930" width="430" height="86" rx="14" fill="#ff7400"/>
-  <text x="322" y="986" fill="#fff" font-size="46" font-weight="700" font-family="Arial, sans-serif">Продолжить</text>
+  <text class="f" x="322" y="986" fill="#fff" font-size="46" font-weight="700">Продолжить</text>
 </svg>`;
 }
 
@@ -541,7 +551,6 @@ function buildStartKeyboard() {
         { text: '🟢 START', callback_data: 'ctrl:start' },
         { text: '⛔ STOP', callback_data: 'ctrl:stop' }
       ],
-      [{ text: '🧾 СОЗДАТЬ QR', callback_data: 'ctrl:create' }],
       [
         { text: '🔄 ОБНОВИТЬ БАЗУ', callback_data: 'seed_import' },
         { text: '👥 КОЛ-ВО', callback_data: 'count_children' }
@@ -554,7 +563,6 @@ function buildReplyKeyboard() {
   return {
     keyboard: [
       [{ text: 'START' }, { text: 'STOP' }],
-      [{ text: 'СОЗДАТЬ QR' }],
       [{ text: '/import_seed' }, { text: '/count' }]
     ],
     resize_keyboard: true,
@@ -578,7 +586,7 @@ async function handleMessage(env, message) {
       env,
       chatId,
       `Бот готов. Детей в базе: ${all.length}.\n` +
-        'Нажмите "СОЗДАТЬ QR" и введите имя ребенка.',
+        'Нажмите START и сразу введите имя ребенка.',
       {
         reply_markup: buildStartKeyboard()
       }
@@ -588,8 +596,8 @@ async function handleMessage(env, message) {
   }
 
   if (text === 'START') {
-    await saveChatState(env, chatId, { paused: false, awaitingQr: false });
-    await sendMessage(env, chatId, 'Режим запущен. Нажмите "СОЗДАТЬ QR".', { reply_markup: buildStartKeyboard() });
+    await saveChatState(env, chatId, { paused: false, awaitingQr: true });
+    await sendMessage(env, chatId, 'Режим запущен. Введите имя ребенка для поиска.', { reply_markup: buildStartKeyboard() });
     await sendMainKeyboard(env, chatId);
     return;
   }
@@ -597,18 +605,6 @@ async function handleMessage(env, message) {
   if (text === 'STOP') {
     await saveChatState(env, chatId, { paused: true, awaitingQr: false });
     await sendMessage(env, chatId, 'Режим остановлен. Нажмите START для продолжения.', { reply_markup: buildStartKeyboard() });
-    await sendMainKeyboard(env, chatId);
-    return;
-  }
-
-  if (text === 'СОЗДАТЬ QR') {
-    const state = await loadChatState(env, chatId);
-    if (state.paused) {
-      await sendMessage(env, chatId, 'Сначала нажмите START.');
-      return;
-    }
-    await saveChatState(env, chatId, { ...state, awaitingQr: true });
-    await sendMessage(env, chatId, 'Введите имя ребенка для поиска.');
     await sendMainKeyboard(env, chatId);
     return;
   }
@@ -632,7 +628,7 @@ async function handleMessage(env, message) {
   }
 
   if (!state.awaitingQr) {
-    await sendMessage(env, chatId, 'Нажмите кнопку "СОЗДАТЬ QR", затем введите имя ребенка.');
+    await sendMessage(env, chatId, 'Нажмите START, затем введите имя ребенка.');
     await sendMainKeyboard(env, chatId);
     return;
   }
@@ -674,8 +670,8 @@ async function handleCallbackQuery(env, callbackQuery) {
 
   if (data === 'ctrl:start') {
     await answerCallback(env, callbackId, 'Запущено');
-    await saveChatState(env, chatId, { paused: false, awaitingQr: false });
-    await sendMessage(env, chatId, 'Режим запущен. Нажмите "СОЗДАТЬ QR".', { reply_markup: buildStartKeyboard() });
+    await saveChatState(env, chatId, { paused: false, awaitingQr: true });
+    await sendMessage(env, chatId, 'Режим запущен. Введите имя ребенка для поиска.', { reply_markup: buildStartKeyboard() });
     await sendMainKeyboard(env, chatId);
     return;
   }
@@ -684,19 +680,6 @@ async function handleCallbackQuery(env, callbackQuery) {
     await answerCallback(env, callbackId, 'Остановлено');
     await saveChatState(env, chatId, { paused: true, awaitingQr: false });
     await sendMessage(env, chatId, 'Режим остановлен. Нажмите START для продолжения.', { reply_markup: buildStartKeyboard() });
-    await sendMainKeyboard(env, chatId);
-    return;
-  }
-
-  if (data === 'ctrl:create') {
-    await answerCallback(env, callbackId, 'Введите имя');
-    const state = await loadChatState(env, chatId);
-    if (state.paused) {
-      await sendMessage(env, chatId, 'Сначала нажмите START.');
-      return;
-    }
-    await saveChatState(env, chatId, { ...state, awaitingQr: true });
-    await sendMessage(env, chatId, 'Введите имя ребенка для поиска.');
     await sendMainKeyboard(env, chatId);
     return;
   }
