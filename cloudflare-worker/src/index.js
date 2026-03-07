@@ -482,8 +482,7 @@ async function buildModalPngBytes({ childName, qrValue }) {
   const resvg = new Resvg(svg, {
     fitTo: { mode: 'width', value: 920 },
     font: {
-      fontFiles: [arialFontBytes],
-      loadSystemFonts: false,
+      fontBuffers: [arialFontBytes],
       defaultFontFamily: 'Arial'
     }
   });
@@ -554,10 +553,10 @@ async function generateQr(env, child) {
   return { success: false, message: 'Не найдено записей для подписания' };
 }
 
-function buildPausedKeyboard() {
+function buildMainKeyboard() {
   return {
     keyboard: [
-      [{ text: 'START' }]
+      [{ text: 'START' }, { text: 'STOP' }]
     ],
     resize_keyboard: true,
     one_time_keyboard: false
@@ -578,7 +577,7 @@ async function handleMessage(env, message) {
       `Бот готов. Детей в базе: ${all.length}.\n` +
         'Нажмите START и сразу введите ФИО ребенка.',
       {
-        reply_markup: buildPausedKeyboard()
+        reply_markup: buildMainKeyboard()
       }
     );
     return;
@@ -586,13 +585,13 @@ async function handleMessage(env, message) {
 
   if (text === 'START') {
     await saveChatState(env, chatId, { paused: false, awaitingQr: true });
-    await sendMessage(env, chatId, 'Введите ФИО ребенка для поиска.', { reply_markup: { remove_keyboard: true } });
+    await sendMessage(env, chatId, 'Введите ФИО ребенка для поиска.', { reply_markup: buildMainKeyboard() });
     return;
   }
 
   if (text === 'STOP' || text === '/stop') {
     await saveChatState(env, chatId, { paused: true, awaitingQr: false });
-    await sendMessage(env, chatId, 'Остановлено. Для продолжения нажмите START.', { reply_markup: buildPausedKeyboard() });
+    await sendMessage(env, chatId, 'Остановлено. Для продолжения нажмите START.', { reply_markup: buildMainKeyboard() });
     return;
   }
 
@@ -610,12 +609,12 @@ async function handleMessage(env, message) {
 
   const state = await loadChatState(env, chatId);
   if (state.paused) {
-    await sendMessage(env, chatId, 'Бот на паузе. Нажмите START.', { reply_markup: buildPausedKeyboard() });
+    await sendMessage(env, chatId, 'Бот на паузе. Нажмите START.', { reply_markup: buildMainKeyboard() });
     return;
   }
 
   if (!state.awaitingQr) {
-    await sendMessage(env, chatId, 'Нажмите START, затем введите ФИО ребенка.', { reply_markup: buildPausedKeyboard() });
+    await sendMessage(env, chatId, 'Нажмите START, затем введите ФИО ребенка.', { reply_markup: buildMainKeyboard() });
     return;
   }
 
