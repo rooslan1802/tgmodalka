@@ -1,0 +1,20 @@
+{
+  "name": "tg-bot-damubala-qr",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "check": "node --check src/index.js && node --check src/services/childrenStore.js && node --check src/services/importService.js && node --check src/services/damubalaQrService.js && node --check src/services/modalImageService.js"
+  },
+  "dependencies": {
+    "csv-parse": "^5.6.0",
+    "dotenv": "^16.6.1",
+    "qrcode": "^1.5.4",
+    "sharp": "^0.34.3",
+    "telegraf": "^4.16.3",
+    "xlsx": "^0.18.5"
+  }
+}

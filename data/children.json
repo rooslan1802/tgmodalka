@@ -1,0 +1,3252 @@
+[
+  {
+    "id": "1772885273611-0",
+    "childName": "Риде Лоретта Евгеньевна",
+    "login": "891023450094",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "МАРИНА ДЕМИДОВА АЛЕКСАНДРОВНА",
+    "phone": "87027968622"
+  },
+  {
+    "id": "1772885273611-1",
+    "childName": "Климавичуте Регина Александровна",
+    "login": "810810450134",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕКАТЕРИНА КЛИМАВИЧЕНЕ СЕРГЕЕВНА",
+    "phone": "87776447001"
+  },
+  {
+    "id": "1772885273611-2",
+    "childName": "Кенжебай Айлана Саятқызы",
+    "login": "920714451123",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЭЛЬМИРА ТАСТЕМИРОВА САТЫБАЛДИНОВНА",
+    "phone": "87754439505"
+  },
+  {
+    "id": "1772885273611-3",
+    "childName": "Кәрім  Самира Қабдуллақызы",
+    "login": "910729450284",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЭЛЬВИРА КАРИМОВА ИБРАЕВНА",
+    "phone": "87751813154"
+  },
+  {
+    "id": "1772885273611-4",
+    "childName": "Бекбулатова Дарина Ринатовна",
+    "login": "870926450334",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ДИНАРА БЕКБУЛАТОВА АГИБАЙЕВНА",
+    "phone": "87715348616"
+  },
+  {
+    "id": "1772885273611-5",
+    "childName": "Құсан Нұрәлі Арманұлы",
+    "login": "811129350812",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АРМАН КУСАНОВ АМАНГЕЛЬДЫЕВИЧ",
+    "phone": "87751521864"
+  },
+  {
+    "id": "1772885273611-6",
+    "childName": "Киселёва  Татьяна Андреевна",
+    "login": "770812450284",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НАТАЛЬЯ КИСЕЛЁВА ПАВЛОВНА",
+    "phone": "87076445413"
+  },
+  {
+    "id": "1772885273611-7",
+    "childName": "Кенжебай Амир Саятұлы",
+    "login": "920714451123",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЭЛЬМИРА ТАСТЕМИРОВА САТЫБАЛДИНОВНА",
+    "phone": "87754439505"
+  },
+  {
+    "id": "1772885273611-8",
+    "childName": "Әбделман Інжу Мұқажанқызы",
+    "login": "811110451149",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АСЕЛЬ ОКАСОВА АРСАЕВНА",
+    "phone": "87758607255"
+  },
+  {
+    "id": "1772885273611-9",
+    "childName": "Гарибжанова Раяна Аяновна",
+    "login": "750617350383",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЯН САМИГУЛЛИН АМАНГЕЛЬДИНОВИЧ",
+    "phone": "87018539117"
+  },
+  {
+    "id": "1772885273611-10",
+    "childName": "Алибаева Дарина Кенжеевна",
+    "login": "810203450500",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖУЛДУЗ КАНТАРБАЕВА КИРГИЗОВНА",
+    "phone": "87473535565"
+  },
+  {
+    "id": "1772885273611-11",
+    "childName": "Баймуканов Даниял Булатович",
+    "login": "780904400686",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛЬМИРА БАЙМУКАНОВА АХМЕТЧАНОВНА",
+    "phone": "87752869615"
+  },
+  {
+    "id": "1772885273611-12",
+    "childName": "Муратбекова  Назерке Каирбековна",
+    "login": "870616450765",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АРАЙЛЫМ САДЫКОВА ҚАЛЕЛХАНҚЫЗЫ",
+    "phone": "87769861111"
+  },
+  {
+    "id": "1772885273611-13",
+    "childName": "Ахметова Арайлым Сундетовна",
+    "login": "890731450724",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛБАНУ ШУКУБАЕВА СУНДЕТОВНА",
+    "phone": "87056414243"
+  },
+  {
+    "id": "1772885273611-14",
+    "childName": "Панкратова Полина Витальевна",
+    "login": "800507302030",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ВИТАЛИЙ ПАНКРАТОВ ВЛАДИМИРОВИЧ",
+    "phone": "87057011202"
+  },
+  {
+    "id": "1772885273611-15",
+    "childName": "Толстых Алиса Александровна",
+    "login": "960115450700",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕКАТЕРИНА ТОЛСТЫХ ПЕТРОВНА",
+    "phone": "87774956722"
+  },
+  {
+    "id": "1772885273611-16",
+    "childName": "Барлубаева Айзере Кайратовна",
+    "login": "730219350257",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "КАЙРАТ БАРЛУБАЕВ АЙМАГАМБЕТОВИЧ",
+    "phone": "87778972882"
+  },
+  {
+    "id": "1772885273611-17",
+    "childName": "Колисниченко Максим Сергеевич",
+    "login": "730312450358",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СВЕТЛАНА КОЛИСНИЧЕНКО ВИКТОРОВНА",
+    "phone": "87773251871"
+  },
+  {
+    "id": "1772885273611-18",
+    "childName": "Барлубаева Алинара Кайратовна",
+    "login": "730219350257",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "КАЙРАТ БАРЛУБАЕВ АЙМАГАМБЕТОВИЧ",
+    "phone": "87778972882"
+  },
+  {
+    "id": "1772885273611-19",
+    "childName": "Зубарев Максим Андреевич",
+    "login": "830417450339",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НАТАЛЬЯ ЗУБАРЕВА ИОСИФОВНА",
+    "phone": "87772876771"
+  },
+  {
+    "id": "1772885273611-20",
+    "childName": "Разумова Анна Викторовна",
+    "login": "830729450653",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ИРИНА ИЛЬЯЩЕНКО НИКОЛАЕВНА",
+    "phone": "87052307193"
+  },
+  {
+    "id": "1772885273611-21",
+    "childName": "Филонов Артем Игоревич",
+    "login": "730207401293",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СВЕТЛАНА ФИЛОНОВА ВАСИЛЬЕВНА",
+    "phone": "87771893009"
+  },
+  {
+    "id": "1772885273611-22",
+    "childName": "Жукенова  Зарина Жанибековна",
+    "login": "740523450268",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛЬМИРА ЖУКЕНОВА МИЙРАМОВНА",
+    "phone": "87775363634"
+  },
+  {
+    "id": "1772885273611-23",
+    "childName": "Бохан Ульяна Александровна",
+    "login": "911216450218",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ОЛЕСЯ БОХАН АЛЕКСАНДРОВНА",
+    "phone": "87078672877"
+  },
+  {
+    "id": "1772885273611-24",
+    "childName": "Стороженко Максим Вадимович",
+    "login": "831114450474",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ВЕРОНИКА БЕЗБОРОДОВА ВЛАДИМИРОВНА",
+    "phone": "87774150272"
+  },
+  {
+    "id": "1772885273611-25",
+    "childName": "Кириенко Белла Вячеславовна",
+    "login": "900130450474",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕЛЕНА КИРИЕНКО СЕРГЕЕВНА",
+    "phone": "87013936739"
+  },
+  {
+    "id": "1772885273611-26",
+    "childName": "Қайыржан Аянат Қайратқызы",
+    "login": "891119450899",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НУРГУЛЬ СЕИТКУЛОВА МАРАТОВНА",
+    "phone": "87027742236"
+  },
+  {
+    "id": "1772885273611-27",
+    "childName": "Мұқаш Мадияр Медғатұлы",
+    "login": "850529450729",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АКБОТА СУЛТАМБАЕВА ИЗБАСАРОВНА",
+    "phone": "87718537914"
+  },
+  {
+    "id": "1772885273611-28",
+    "childName": "Касенова Жазира Кумаровна",
+    "login": "891218450582",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙГУЛЬ КАСЕНОВА АБЛАЕВНА",
+    "phone": "87787674678"
+  },
+  {
+    "id": "1772885273611-29",
+    "childName": "Головачёва Ангелина Владимировна",
+    "login": "830515451201",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СВЕТЛАНА ГОЛОДНИКОВА СЕРГЕЕВНА",
+    "phone": "87051250915"
+  },
+  {
+    "id": "1772885273611-30",
+    "childName": "Стороженко Станислав Вадимович",
+    "login": "831114450474",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ВЕРОНИКА БЕЗБОРОДОВА ВЛАДИМИРОВНА",
+    "phone": "87774150272"
+  },
+  {
+    "id": "1772885273611-31",
+    "childName": "Жантемиров  Тельман Янарович",
+    "login": "880320450193",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АККУ АСЫЛТАСОВА САГЫНДЫКОВНА",
+    "phone": "87711692507"
+  },
+  {
+    "id": "1772885273611-32",
+    "childName": "Бохан Полина Александровна",
+    "login": "911216450218",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ОЛЕСЯ БОХАН АЛЕКСАНДРОВНА",
+    "phone": "87078672877"
+  },
+  {
+    "id": "1772885273611-33",
+    "childName": "Жукенова Анель Асылбековна",
+    "login": "930617450744",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛЬБИНА ЖУКЕНОВА СЕРИКОВНА",
+    "phone": "87056516417"
+  },
+  {
+    "id": "1772885273611-34",
+    "childName": "Разумов Александр Викторович",
+    "login": "830729450653",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ИРИНА ИЛЬЯЩЕНКО НИКОЛАЕВНА",
+    "phone": "87052307193"
+  },
+  {
+    "id": "1772885273611-35",
+    "childName": "Нұрлан Нұрай Ерланқызы",
+    "login": "850320450267",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖАЗГУЛЬ МАКЫЖАНОВА БЕИМБЕТОВНА",
+    "phone": "87054418233"
+  },
+  {
+    "id": "1772885273611-36",
+    "childName": "Мұрат Дидар Думанұлы",
+    "login": "860303450474",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АСЫЛЗАТ ТАУБАЕВА МУРАТОВНА",
+    "phone": "87779260161"
+  },
+  {
+    "id": "1772885273611-37",
+    "childName": "Ахметов Алихан Жумабекович",
+    "login": "800326400115",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛЬМИРА АХМЕТОВА САТЫБАЛДОВНА",
+    "phone": "87474918602"
+  },
+  {
+    "id": "1772885273611-38",
+    "childName": "Кашафутдинова София Тагировна",
+    "login": "770119400518",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕЛЕНА КАШАФУТДИНОВА АЛЕКСАНДРОВНА",
+    "phone": "87711697412"
+  },
+  {
+    "id": "1772885273611-39",
+    "childName": "Ержанова Малика Максатовна",
+    "login": "810528450121",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "БОТАГОЗ ЕРЖАНОВА СЕРИКОВНА",
+    "phone": "87056608848"
+  },
+  {
+    "id": "1772885273611-40",
+    "childName": "Жаслан Інжу Ерланқызы",
+    "login": "910215450468",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙГЕРИМ ЕСКАКОВА КАНАТОВНА",
+    "phone": "87788027562"
+  },
+  {
+    "id": "1772885273611-41",
+    "childName": "Лапо Ника Евгеньевна",
+    "login": "830612450677",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "МАРИНА ЛАПО ИВАНОВНА",
+    "phone": "77779226144"
+  },
+  {
+    "id": "1772885273611-42",
+    "childName": "Каримов Мейрхан Талгатович",
+    "login": "790602402494",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙНУР ШАРИПОВА БАКДЖАНОВНА",
+    "phone": "87715418279"
+  },
+  {
+    "id": "1772885273611-43",
+    "childName": "Темирбеков Темирхан Канатович",
+    "login": "941119450147",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "КРИСТИНА ТЕМИРБЕКОВА ЭДУАРДОВНА",
+    "phone": "87053211048"
+  },
+  {
+    "id": "1772885273611-44",
+    "childName": "Алпеева Дарья Юрьевна",
+    "login": "750728450313",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ОЛЬГА АЛПЕЕВА БОРИСОВНА",
+    "phone": "87756683905"
+  },
+  {
+    "id": "1772885273611-45",
+    "childName": "Пукема Софья Васильевна",
+    "login": "831230350598",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ВАСИЛИЙ ПУКЕМА ИВАНОВИЧ",
+    "phone": "87776069395"
+  },
+  {
+    "id": "1772885273611-46",
+    "childName": "Пукема Владислав Васильевич",
+    "login": "831230350598",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ВАСИЛИЙ ПУКЕМА ИВАНОВИЧ",
+    "phone": "87776069395"
+  },
+  {
+    "id": "1772885273611-47",
+    "childName": "наурызбай саят ерланұлы",
+    "login": "870224450873",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "КЫМБАТ МУРЗАГУЛОВА БЕРИКОВНА",
+    "phone": "87781384066"
+  },
+  {
+    "id": "1772885273611-48",
+    "childName": "Сералин Тимур Русланович",
+    "login": "750219450326",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖАНАР МУСАГИМОВА ГАБДУЛОВНА",
+    "phone": "87775461707"
+  },
+  {
+    "id": "1772885273611-49",
+    "childName": "Сайран Сұлтан Олжасұлы",
+    "login": "890721450571",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "БАЯН ТЕНИСБАЕВА ЖАМБЫЛОВНА",
+    "phone": "87757511175"
+  },
+  {
+    "id": "1772885273611-50",
+    "childName": "Назымбек Әділхан Айдарбекұлы",
+    "login": "830722450655",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ДИНАРА АЙКЕНОВА АМАНГЕЛЬДЫЕВНА",
+    "phone": "87785835216"
+  },
+  {
+    "id": "1772885273611-51",
+    "childName": "Нуршарипова Айым Ерлановна",
+    "login": "890702450697",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЗИЗА НУРШАРИПОВА АСКАРОВНА",
+    "phone": "87779786216"
+  },
+  {
+    "id": "1772885273611-52",
+    "childName": "Cултанбекова Айсауле Жасулановна",
+    "login": "850124450519",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛДЕН СУЛТАНБЕКОВА ОМИРЖАНОВНА",
+    "phone": "87773253976"
+  },
+  {
+    "id": "1772885273611-53",
+    "childName": "Луцак Елизавета Владиславовна",
+    "login": "810622401124",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СВЕТЛАНА ЛУЦАК МИХАЙЛОВНА",
+    "phone": "87787149316"
+  },
+  {
+    "id": "1772885273611-54",
+    "childName": "Кулешова Алиса Андреевна",
+    "login": "790719300884",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНДРЕЙ КУЛЕШОВ АЛЕКСАНДРОВИЧ",
+    "phone": "87772228635"
+  },
+  {
+    "id": "1772885273611-55",
+    "childName": "Шамганова Лаура Азаматовна",
+    "login": "860504450526",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНАРА ЕЛЕМАНОВА АБАЕВНА",
+    "phone": "87782052606"
+  },
+  {
+    "id": "1772885273611-56",
+    "childName": "Зейнолла Жанел Жанатқызы",
+    "login": "871102450097",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖАНАР ДЮСЕКОВА МАРАТОВНА",
+    "phone": "87759654450"
+  },
+  {
+    "id": "1772885273611-57",
+    "childName": "Cәкен Інжу Қалаубекқызы",
+    "login": "890121450183",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НАРГИЗ АКЖИГИТОВА КАИРЖАНОВНА",
+    "phone": "87476444206"
+  },
+  {
+    "id": "1772885273611-58",
+    "childName": "Кириенко Маргарита Вячеславовна",
+    "login": "900130450474",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕЛЕНА КИРИЕНКО СЕРГЕЕВНА",
+    "phone": "87013936739"
+  },
+  {
+    "id": "1772885273611-59",
+    "childName": "Мироненко Василиса Станиславовна",
+    "login": "831017451366",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕЛЕНА НИСТРАТОВА СЕРГЕЕВНА",
+    "phone": "87055103888"
+  },
+  {
+    "id": "1772885273611-60",
+    "childName": "Каирбекова Диана Асхатовна",
+    "login": "821126450408",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕЛМИРА МОЛДАГОЖИНА АСКАРОВНА",
+    "phone": "87479025591"
+  },
+  {
+    "id": "1772885273611-61",
+    "childName": "Алибаев Амир Кенжеевич",
+    "login": "810203450500",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖУЛДУЗ КАНТАРБАЕВА КИРГИЗОВНА",
+    "phone": "87473535565"
+  },
+  {
+    "id": "1772885273611-62",
+    "childName": "Нұрмахан Аякөз Ғазизқызы",
+    "login": "840306450645",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙЖАН КУСАИНОВА КУАНЫШБАЕВНА",
+    "phone": "87053211020"
+  },
+  {
+    "id": "1772885273611-63",
+    "childName": "Тұрғын Арина Жұбанышқызы",
+    "login": "860311451014",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЯУЖАН КОБЕЕВА ОЙРАТОВНА",
+    "phone": "87766798580"
+  },
+  {
+    "id": "1772885273611-64",
+    "childName": "Липустина Анастасия Евгеньевна",
+    "login": "810103400927",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СВЕТЛАНА ЛИПУСТИНА ГЕННАДЬЕВНА",
+    "phone": "87773123554"
+  },
+  {
+    "id": "1772885273612-65",
+    "childName": "Брилькова Анастасия Станиславовна",
+    "login": "901018450913",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЛЮДМИЛА БРИЛЬКОВА ГЕННАДЬЕВНА",
+    "phone": "87776597754"
+  },
+  {
+    "id": "1772885273612-66",
+    "childName": "Сейіт Дана Булатқызы",
+    "login": "770220450286",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙГУЛЬ СЕЙТОВА АЛТАЕВНА",
+    "phone": "87778971620"
+  },
+  {
+    "id": "1772885273612-67",
+    "childName": "Новикова Валерия Ивановна",
+    "login": "860429450777",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖАННА НОВИКОВА ВАЛЕРЬЕВНА",
+    "phone": "87771356081"
+  },
+  {
+    "id": "1772885273612-68",
+    "childName": "Сейіт Әсем Булатқызы",
+    "login": "770220450286",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙГУЛЬ СЕЙТОВА АЛТАЕВНА",
+    "phone": "87778971620"
+  },
+  {
+    "id": "1772885273612-69",
+    "childName": "Танкенова Адия Сериковна",
+    "login": "841213450197",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЗУЛЬФИЯ НУРАХАЕВА ЖАСУЛАНОВНА",
+    "phone": "87001900061"
+  },
+  {
+    "id": "1772885273612-70",
+    "childName": "Ашимова  Жасмин  Руслановна",
+    "login": "811213450548",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СНЕЖАНА АШИМОВА ЖУМАБАЕВНА",
+    "phone": "87770838513"
+  },
+  {
+    "id": "1772885273612-71",
+    "childName": "Ибраева Даяна Талгатовна",
+    "login": "791222302376",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ТАЛГАТ ИБРАЕВ ОМИРБЕКОВИЧ",
+    "phone": "87714386309"
+  },
+  {
+    "id": "1772885273612-72",
+    "childName": "Ржавина Злата Сергеевна",
+    "login": "820317450572",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СВЕТЛАНА ХОМЯК ИВАНОВНА",
+    "phone": "87073905595"
+  },
+  {
+    "id": "1772885273612-73",
+    "childName": "Ербол Дияр Бахтиярұлы",
+    "login": "880913450335",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ДИНАРА ШЕГЕБАЕВА НУРЖАНОВНА",
+    "phone": "87011027833"
+  },
+  {
+    "id": "1772885273612-74",
+    "childName": "Есімсеит Айару Өмірқызы",
+    "login": "941130451135",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙЖАН ЕСІМСЕИТ ТУРСУНБЕКОВНА",
+    "phone": "87755177909"
+  },
+  {
+    "id": "1772885273612-75",
+    "childName": "Климавичуте Аделина  Александровна",
+    "login": "810810450134",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕКАТЕРИНА КЛИМАВИЧЕНЕ СЕРГЕЕВНА",
+    "phone": "87776447001"
+  },
+  {
+    "id": "1772885273612-76",
+    "childName": "Халел Малика Саянқызы",
+    "login": "920416450185",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙНУРА ГАБДРАШИТОВА ИГБАЕВНА",
+    "phone": "87778940828"
+  },
+  {
+    "id": "1772885273612-77",
+    "childName": "Малышев Максим Александрович",
+    "login": "871011450471",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "МАРИЯ МАЛЫШЕВА АЛЕКСАНДРОВНА",
+    "phone": "87052333300"
+  },
+  {
+    "id": "1772885273612-78",
+    "childName": "Далелхан Ясмин Кадыржанқызы",
+    "login": "960518450365",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛИЯ МУХАМЕТЖАНОВА БОЛАТОВНА",
+    "phone": "87000209660"
+  },
+  {
+    "id": "1772885273612-79",
+    "childName": "Сәкен Жасмин Қалаубекқызы",
+    "login": "890121450183",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НАРГИЗ АКЖИГИТОВА КАИРЖАНОВНА",
+    "phone": "87476444206"
+  },
+  {
+    "id": "1772885273612-80",
+    "childName": "Жамал Лаура Жамбылқызы",
+    "login": "810316401775",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ТУРСЫНАЙ КЕРИМБЕКОВА КУДРЕТОВНА",
+    "phone": "87785317662"
+  },
+  {
+    "id": "1772885273612-81",
+    "childName": "Снурницына Ксения Александровна",
+    "login": "930427450137",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АННА СНУРНИЦЫНА ВАСИЛЬЕВНА",
+    "phone": "87776143566"
+  },
+  {
+    "id": "1772885273612-82",
+    "childName": "Снурницына Дарья Александровна",
+    "login": "930427450137",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АННА СНУРНИЦЫНА ВАСИЛЬЕВНА",
+    "phone": "87776143566"
+  },
+  {
+    "id": "1772885273612-83",
+    "childName": "Тұрғын Амира Жұбанышқызы",
+    "login": "860311451014",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЯУЖАН КОБЕЕВА ОЙРАТОВНА",
+    "phone": "87766798580"
+  },
+  {
+    "id": "1772885273612-84",
+    "childName": "Тұрсынбекұлы Нұржан",
+    "login": "730107450046",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НАЗГУЛЬ КАКЕНОВА ЖАНБАТЫРОВНА",
+    "phone": "87777639625"
+  },
+  {
+    "id": "1772885273612-85",
+    "childName": "Жарқын Адия Алмазқызы",
+    "login": "910221451131",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "САЛТАНАТ АНАФИНА МАРАТОВНА",
+    "phone": "87770823938"
+  },
+  {
+    "id": "1772885273612-86",
+    "childName": "Кириенко Владислав Вячеславович",
+    "login": "900130450474",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕЛЕНА КИРИЕНКО СЕРГЕЕВНА",
+    "phone": "87013936739"
+  },
+  {
+    "id": "1772885273612-87",
+    "childName": "Сатина  Сабина Смаиловна",
+    "login": "780602400911",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖАННА САТИНА ЖУМАЕВНА",
+    "phone": "87051629839"
+  },
+  {
+    "id": "1772885273612-88",
+    "childName": "Оразаев Ерасыл Эльбрусович",
+    "login": "861030450057",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛЬМАЙРА КАИРКЕЛЬДИНА МАРАТОВНА",
+    "phone": "87711065483"
+  },
+  {
+    "id": "1772885273612-89",
+    "childName": "Жарқын Томирис Алмазқызы",
+    "login": "910221451131",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "САЛТАНАТ АНАФИНА МАРАТОВНА",
+    "phone": "87770823938"
+  },
+  {
+    "id": "1772885273612-90",
+    "childName": "Досым Жансая Ербулатқызы",
+    "login": "830426450666",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖАНИЯ КАНАПИНА ШАЯХМЕТОВНА",
+    "phone": "87058892755"
+  },
+  {
+    "id": "1772885273612-91",
+    "childName": "Тлепбергенов Амир Сайранович",
+    "login": "890220499124",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НУРГУЛЬ ТЛЕПБЕРГЕНОВА КЕНИСОВНА",
+    "phone": "87786031704"
+  },
+  {
+    "id": "1772885273612-92",
+    "childName": "Тубина Лейсан Ильинична",
+    "login": "891002350519",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ИЛЬЯ ТУБИН ВИКТОРОВИЧ",
+    "phone": "87771352254"
+  },
+  {
+    "id": "1772885273612-93",
+    "childName": "Аскарова Альмира Мадияровна",
+    "login": "880709450742",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АСЕМГУЛЬ АСКАРОВА АЛТАЕВНА",
+    "phone": "87714238900"
+  },
+  {
+    "id": "1772885273612-94",
+    "childName": "Әбділман Айзере Мұқажанқызы",
+    "login": "811110451149",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АСЕЛЬ ОКАСОВА АРСАЕВНА",
+    "phone": "87758607255"
+  },
+  {
+    "id": "1772885273612-95",
+    "childName": "Тынысбек Медина Ниязбекқызы",
+    "login": "910215450468",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙГЕРИМ ЕСКАКОВА КАНАТОВНА",
+    "phone": "87788027562"
+  },
+  {
+    "id": "1772885273612-96",
+    "childName": "Аманкелді Жангир Манарбекұлы",
+    "login": "851016451077",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛЬНАРА СЫЗДЫКОВА ЖАНТИЯКОВНА",
+    "phone": "87771924665"
+  },
+  {
+    "id": "1772885273612-97",
+    "childName": "Ербол Аридаш Ернарқызы",
+    "login": "870902451054",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "Ибраева Кымбат Балтабаевна",
+    "phone": "87756298887"
+  },
+  {
+    "id": "1772885273612-98",
+    "childName": "Танкенов Абилькарим Серикович",
+    "login": "841213450197",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЗУЛЬФИЯ НУРАХАЕВА ЖАСУЛАНОВНА",
+    "phone": "87001900061"
+  },
+  {
+    "id": "1772885273612-99",
+    "childName": "Исенова Жансая Талгатовна",
+    "login": "840531450440",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙНА ИСЕНОВА АМАНГЕЛЬДИНОВНА",
+    "phone": "87716611385"
+  },
+  {
+    "id": "1772885273612-100",
+    "childName": "Естанова Данелия Азматовна",
+    "login": "850609450307",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛИЯ ЕСТАНОВА АХАТОВНА",
+    "phone": "87052312525"
+  },
+  {
+    "id": "1772885273612-101",
+    "childName": "Мусаллямова  Доминика Ринатовна",
+    "login": "901204450250",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НАТАЛЬЯ МУСАЛЛЯМОВА АЛЕКСАНДРОВНА",
+    "phone": "87773363413"
+  },
+  {
+    "id": "1772885273612-102",
+    "childName": "Абильмажинова Елдана Ербулановна",
+    "login": "831127451027",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АКМАРАЛ АБИЛЬМАЖИНОВА ЖУМАДИЛЛАЕВНА",
+    "phone": "87751025909"
+  },
+  {
+    "id": "1772885273612-103",
+    "childName": "Султанбекова Жансая Жасулановна",
+    "login": "850124450519",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛДЕН СУЛТАНБЕКОВА ОМИРЖАНОВНА",
+    "phone": "87773253976"
+  },
+  {
+    "id": "1772885273612-104",
+    "childName": "Қазиақбар Бекарыс Мұхитұлы",
+    "login": "821219450582",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖАЗИРА БУРГУЗОВА КАИРБЕКОВНА",
+    "phone": "87078167609"
+  },
+  {
+    "id": "1772885273612-105",
+    "childName": "Власова Златослава Владиславовна",
+    "login": "940209450301",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НАТАЛЬЯ ВЛАСОВА АНАТОЛЬЕВНА",
+    "phone": "87719040596"
+  },
+  {
+    "id": "1772885273612-106",
+    "childName": "Қазиақбар Ернар Мұхитұлы",
+    "login": "821219450582",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖАЗИРА БУРГУЗОВА КАИРБЕКОВНА",
+    "phone": "87078167609"
+  },
+  {
+    "id": "1772885273612-107",
+    "childName": "Поспелова Альбина Анатольевна",
+    "login": "850724450937",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛЬФИЯ БИКЕЕВА МУХАМЕДАШЕВНА",
+    "phone": "87051082334"
+  },
+  {
+    "id": "1772885273612-108",
+    "childName": "Садық Әлихан Бауржанұлы",
+    "login": "920716450324",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛТЫН ОМАРОВА БЕКЕЖАНОВНА",
+    "phone": "87769777575"
+  },
+  {
+    "id": "1772885273612-109",
+    "childName": "Сураганов Чингис Ерикович",
+    "login": "730408401569",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛЬСАРА ВАЛЕЕВА ЕРНАЗАРОВНА",
+    "phone": "87751526335"
+  },
+  {
+    "id": "1772885273612-110",
+    "childName": "Иванов Сергей Александрович",
+    "login": "880701450977",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ВИКТОРИЯ ИВАНОВА ОЛЕГОВНА",
+    "phone": "87753008349"
+  },
+  {
+    "id": "1772885273612-111",
+    "childName": "Аскаров Нурбек Асхатович",
+    "login": "920106450249",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖАНАР ЕМЕНАЛИНА ЕРКИНОВНА",
+    "phone": "87711740074"
+  },
+  {
+    "id": "1772885273612-112",
+    "childName": "Анацкая Ева Каримовна",
+    "login": "890526450026",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ВАЛЕНТИНА АНАЦКАЯ АНАТОЛЬЕВНА",
+    "phone": "87051196162"
+  },
+  {
+    "id": "1772885273612-113",
+    "childName": "Иванова  Екатерина Александровна",
+    "login": "880701450977",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ВИКТОРИЯ ИВАНОВА ОЛЕГОВНА",
+    "phone": "87753008349"
+  },
+  {
+    "id": "1772885273612-114",
+    "childName": "Назмутдинова Ляйсан Диасовна",
+    "login": "910510450927",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛИНА НАЗМУТДИНОВА ПЕТРОВНА",
+    "phone": "87773905185"
+  },
+  {
+    "id": "1772885273612-115",
+    "childName": "Балова Софья Вячеславовна",
+    "login": "890908451101",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "САЛТАНАТ БАЛОВА ЕРКИНОВНА",
+    "phone": "87776077642"
+  },
+  {
+    "id": "1772885273612-116",
+    "childName": "Жанболат Мағжан Әділұлы",
+    "login": "841116451138",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "САНДЫГУЛЬ ТАШЕТОВА КАНАТОВНА",
+    "phone": "87029101084"
+  },
+  {
+    "id": "1772885273612-117",
+    "childName": "Курманбаева Дарина Романовна",
+    "login": "921208450434",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "САУЛЕ КУРМАНБАЕВА СЕРЫКОВНА",
+    "phone": "87074388571"
+  },
+  {
+    "id": "1772885273612-118",
+    "childName": "Ербұлан Айзере Досжанқызы",
+    "login": "830215450470",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖАНИЯ ЖАНТУГАНОВА СЕРИКБАЕВНА",
+    "phone": "87014483515"
+  },
+  {
+    "id": "1772885273612-119",
+    "childName": "Сәкен Томирис Александрқызы",
+    "login": "880202450240",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙТОЛҚЫН ҚАЛАУ БАРҚЫТҚЫЗЫ",
+    "phone": "87058608957"
+  },
+  {
+    "id": "1772885273612-120",
+    "childName": "Демидова Алиса Александровна",
+    "login": "881014450370",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "УЛЬЯНА ДЕМИДОВА НИКОЛАЕВНА",
+    "phone": "87051136700"
+  },
+  {
+    "id": "1772885273612-121",
+    "childName": "Ерханова  Надия Миятовна",
+    "login": "910723450767",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖАНЕРКЕ ЕРХАН СЕРИКОВНА",
+    "phone": "87471302471"
+  },
+  {
+    "id": "1772885273612-122",
+    "childName": "Зайкина Сания Расуловна",
+    "login": "860504450526",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНАРА ЕЛЕМАНОВА АБАЕВНА",
+    "phone": "87782052606"
+  },
+  {
+    "id": "1772885273612-123",
+    "childName": "Глазунова Александра Сергеевна",
+    "login": "931029401732",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНАСТАСИЯ ГЛАЗУНОВА АЛЕКСАНДРОВНА",
+    "phone": "87076160938"
+  },
+  {
+    "id": "1772885273612-124",
+    "childName": "Демидов Максим Александрович",
+    "login": "881014450370",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "УЛЬЯНА ДЕМИДОВА НИКОЛАЕВНА",
+    "phone": "87051136700"
+  },
+  {
+    "id": "1772885273612-125",
+    "childName": "Садвақас Нұрмұхамед Ермекұлы",
+    "login": "830110401664",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙДА АБДРАХИМОВА АМАНКЕЛЬДИЕВНА",
+    "phone": "87058062251"
+  },
+  {
+    "id": "1772885273612-126",
+    "childName": "МУСТАНОВА АЛИША БАТАРБЕКОВНА",
+    "login": "851117450953",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГАУХАР МУСТАНОВА БАТАРБЕКОВНА",
+    "phone": "87009999088"
+  },
+  {
+    "id": "1772885273612-127",
+    "childName": "Даулетқан Зұлқар Қадырсізұлы",
+    "login": "820118403083",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛМАГҮЛ ҚАПАШ",
+    "phone": "87078133956"
+  },
+  {
+    "id": "1772885273612-128",
+    "childName": "Жантасова Самира Бегзатовна",
+    "login": "871208450066",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНАРА ЖАНТАСОВА АМАНЖОЛОВНА",
+    "phone": "87474909849"
+  },
+  {
+    "id": "1772885273612-129",
+    "childName": "Ештаева Карина Рамильевна",
+    "login": "871208450066",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНАРА ЖАНТАСОВА АМАНЖОЛОВНА",
+    "phone": "87474909849"
+  },
+  {
+    "id": "1772885273612-130",
+    "childName": "РАМАЗАН ЖАДЫРА",
+    "login": "880530351018",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ДАНИЯР РАМАЗАН АБЛАЙҰЛЫ",
+    "phone": "87769944127"
+  },
+  {
+    "id": "1772885273612-131",
+    "childName": "Бекмуханбетова Адина Аслановна",
+    "login": "781130401799",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНАРГУЛЬ СУЛЕЙМЕНОВА АМАНТАЕВНА",
+    "phone": "87713783359"
+  },
+  {
+    "id": "1772885273612-132",
+    "childName": "Жакина  Дайана Данияровна",
+    "login": "880116450818",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ВЕНЕРА ЖАКИНА ТОБАГАБЫЛОВНА",
+    "phone": "87759655511"
+  },
+  {
+    "id": "1772885273612-133",
+    "childName": "Емельянова Милана Ивановна",
+    "login": "850706450077",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СВЕТЛАНА ЕМЕЛЬЯНОВА ИВАНОВНА",
+    "phone": "87771942595"
+  },
+  {
+    "id": "1772885273612-134",
+    "childName": "Леднева Дарья Сергеевна",
+    "login": "711128301114",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СЕРГЕЙ ЛЕДНЁВ ВЛАДИМИРОВИЧ",
+    "phone": "87772999603"
+  },
+  {
+    "id": "1772885273612-135",
+    "childName": "Бекбергенова Малика Руслановна",
+    "login": "980423450203",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ДИАНА БЕКБЕРГЕНОВА ЕРИКОВНА",
+    "phone": "87083355647"
+  },
+  {
+    "id": "1772885273612-136",
+    "childName": "Криушов Алексей Иванович",
+    "login": "870319350596",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ИВАН КРИУШОВ ПАВЛОВИЧ",
+    "phone": "87052651531"
+  },
+  {
+    "id": "1772885273612-137",
+    "childName": "Тихая Маргарита Валерьевна",
+    "login": "830424450229",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НИНА ТИХАЯ ЛЕОНИДОВНА",
+    "phone": "87767346284"
+  },
+  {
+    "id": "1772885273612-138",
+    "childName": "Мальцев Ярослав Сергеевич",
+    "login": "830215451240",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "МАЛЬЦЕВА ОЛЕСЯ АЛЕКСЕЕВНА",
+    "phone": "87475391703"
+  },
+  {
+    "id": "1772885273612-139",
+    "childName": "Филимонов Илья Александрович",
+    "login": "840716350261",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛЕКСАНДР ФИЛИМОНОВ КОНСТАНТИНОВИЧ",
+    "phone": "87054562445"
+  },
+  {
+    "id": "1772885273612-140",
+    "childName": "Выприцких Аина Денисовна",
+    "login": "860626450410",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙГУЛЬ НУРСУЛТАНОВА ХАУЕЗОВНА",
+    "phone": "87056689793"
+  },
+  {
+    "id": "1772885273612-141",
+    "childName": "Смагулова Наргиз Серикбаевна",
+    "login": "860610451144",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛМАГУЛЬ ДОСЫБЕКОВА ГАЛИМОВНА",
+    "phone": "87758164654"
+  },
+  {
+    "id": "1772885273612-142",
+    "childName": "Колесник Таисия Вадимовна",
+    "login": "810612400101",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛЁНА КОЛЕСНИК ЯРОСЛАВОВНА",
+    "phone": "87052058519"
+  },
+  {
+    "id": "1772885273612-143",
+    "childName": "КИСЕЛЁВА Мария Александровна",
+    "login": "781219402176",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НАТАЛЬЯ КИСЕЛЁВА ГЕОРГИЕВНА",
+    "phone": "87055766013"
+  },
+  {
+    "id": "1772885273612-144",
+    "childName": "Котосина Яна Юрьевна",
+    "login": "780102400276",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ТАТЬЯНА КОТОСИНА НИКОЛАЕВНА",
+    "phone": "87784071685"
+  },
+  {
+    "id": "1772885273612-145",
+    "childName": "Чучина Злата Александровна",
+    "login": "870223450045",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЮЛИЯ ЧУЧИНА ВАСИЛЬЕВНА",
+    "phone": "87081246658"
+  },
+  {
+    "id": "1772885273612-146",
+    "childName": "Чучина Елена Александровна",
+    "login": "870223450045",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЮЛИЯ ЧУЧИНА ВАСИЛЬЕВНА",
+    "phone": "87081246658"
+  },
+  {
+    "id": "1772885273612-147",
+    "childName": "Ахметова Гаухар Кадирхановна",
+    "login": "870223450898",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "РАУШАН АХМЕТОВА ВАЛИХАНОВНА",
+    "phone": "87076607375"
+  },
+  {
+    "id": "1772885273612-148",
+    "childName": "Дивеева Варвара Сергеевна",
+    "login": "860623450612",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "МАРИЯ ДИВЕЕВА СЕРГЕЕВНА",
+    "phone": "87470343802"
+  },
+  {
+    "id": "1772885273612-149",
+    "childName": "Султангали Махаббат Медетқызы",
+    "login": "890413451525",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЛАУРА СУЛТАНГАЛИЕВА МУРАТБЕКОВНА",
+    "phone": "87757494773"
+  },
+  {
+    "id": "1772885273612-150",
+    "childName": "Дарханқызы Дария",
+    "login": "750630402579",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛЖАМАЛ АЛИЕВА ЖАКСЫМУРАТОВНА",
+    "phone": "87753960748"
+  },
+  {
+    "id": "1772885273612-151",
+    "childName": "Явная Ангелина Васильевна",
+    "login": "960607451971",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ВИКТОРИЯ ЯВНАЯ ВИКТОРОВНА",
+    "phone": "87054529558"
+  },
+  {
+    "id": "1772885273612-152",
+    "childName": "Серік Бекнұр Нұрболұлы",
+    "login": "930415450240",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "БЕКЗАТОВА ГАУХАР ЖАНАТОВНА",
+    "phone": "87783731178"
+  },
+  {
+    "id": "1772885273612-153",
+    "childName": "Тажин Алдияр Мадьярович",
+    "login": "900502450614",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АИМЖАН ТАЖИНА БАТЫРКАНОВНА",
+    "phone": "87752305633"
+  },
+  {
+    "id": "1772885273612-154",
+    "childName": "САЛЬМУХАМЕТОВА  АЙГЕРИМ  АРСТАНБАЕВНА",
+    "login": "730930450289",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛИЯ УТЕЕВА САЛЕХАНОВНА",
+    "phone": "87751429955"
+  },
+  {
+    "id": "1772885273612-155",
+    "childName": "Бакытжанова Аиша Жарасовна",
+    "login": "800124400246",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛИЯ НУРКЕНОВА СУМЖУРЕКОВНА",
+    "phone": "87759234855"
+  },
+  {
+    "id": "1772885273612-156",
+    "childName": "Ромашкин Богдан Евгениевич",
+    "login": "880216451344",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ТАТЬЯНА РОМАШКИНА АЛЕКСАНДРОВНА",
+    "phone": "87051256634"
+  },
+  {
+    "id": "1772885273612-157",
+    "childName": "Сенковец Ксения Игнатовна",
+    "login": "890331450343",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СЕНКОВЕЦ ЕКАТЕРИНА АЛЕКСАНДРОВНА",
+    "phone": "87073633216"
+  },
+  {
+    "id": "1772885273612-158",
+    "childName": "Подтепа Иван Петрович",
+    "login": "740903450451",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НАДЕЖДА ПРИМАК АСМАНОВНА",
+    "phone": "87773666619"
+  },
+  {
+    "id": "1772885273612-159",
+    "childName": "Оразбеков Алияр Алибекович",
+    "login": "901208450976",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "МАХМУТОВА АЙГУЛЬ АМАНГЕЛЬДИЕВНА",
+    "phone": "87077470569"
+  },
+  {
+    "id": "1772885273612-160",
+    "childName": "Нурпеисова Адия Амангельдиевна",
+    "login": "580314400141",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НУРПЕИСОВА АЙМАН ДЮСКАЛИЕВНА",
+    "phone": "87077470569"
+  },
+  {
+    "id": "1772885273612-161",
+    "childName": "Малофеева Валерия Владимировна",
+    "login": "821020450342",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "КСЕНИЯ МАЛОФЕЕВА ВЛАДИМИРОВНА",
+    "phone": "87776373889"
+  },
+  {
+    "id": "1772885273612-162",
+    "childName": "Бакчаков  Омархан  Бауржанович",
+    "login": "910227451174",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АКБОТА БАКЧАКОВА АЗАНБАЕВНА",
+    "phone": "87479029627"
+  },
+  {
+    "id": "1772885273612-163",
+    "childName": "Жарасбаева Ясмин Азаматовна",
+    "login": "801125450508",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ИРИНА ЖАРАСБАЕВА ПЕТРОВНА",
+    "phone": "87475141282"
+  },
+  {
+    "id": "1772885273612-164",
+    "childName": "Деткина Вероника Сергеевна",
+    "login": "880921450285",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НАДЕЖДА ДЕТКИНА НИКОЛАЕВНА",
+    "phone": "87475197688"
+  },
+  {
+    "id": "1772885273612-165",
+    "childName": "Береген Амина Асылбековна",
+    "login": "710930499079",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ОЛЬГА ИМАНБАЕВА ПЕТРОВНА",
+    "phone": "87075271565"
+  },
+  {
+    "id": "1772885273612-166",
+    "childName": "Каримова Рузанна Зелимхановна",
+    "login": "820827450091",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ДИНАРА КАРИМОВА ВЯЧЕСЛАВОВНА",
+    "phone": "87055621103"
+  },
+  {
+    "id": "1772885273612-167",
+    "childName": "Митеева  Жансая Миржановна",
+    "login": "841209450928",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ДИНАРА МИТЕЕВА АБЫЛЬГАЗЫЕВНА",
+    "phone": "87022564681"
+  },
+  {
+    "id": "1772885273612-168",
+    "childName": "Гапеев Артём Михайлович",
+    "login": "890428350582",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "МИХАИЛ ГАПЕЕВ СЕРГЕЕВИЧ",
+    "phone": "87073696016"
+  },
+  {
+    "id": "1772885273612-169",
+    "childName": "Саткангулов Назаркул Булатович",
+    "login": "860116350025",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "БУЛАТ САТКАНГУЛОВ ЖАКПБАЕВИЧ",
+    "phone": "87754750692"
+  },
+  {
+    "id": "1772885273612-170",
+    "childName": "Саткангулов Хамза Булатович",
+    "login": "860116350025",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "БУЛАТ САТКАНГУЛОВ ЖАКПБАЕВИЧ",
+    "phone": "87754750692"
+  },
+  {
+    "id": "1772885273612-171",
+    "childName": "Харитоненко Александр Евгеньевич",
+    "login": "770720450204",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЛИЛИЯ ХАРИТОНЕНКО ФАГИЛОВНА",
+    "phone": "87074643820"
+  },
+  {
+    "id": "1772885273612-172",
+    "childName": "Серикбай Ясмин Абаткызы",
+    "login": "850104451220",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕРМАГАМБЕТОВА ШОЛПАН СЕРГЕЕВНА",
+    "phone": "87058032580"
+  },
+  {
+    "id": "1772885273612-173",
+    "childName": "Крылов Мирас Витальевич",
+    "login": "890503450843",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "САНИЯ КРЫЛОВА ЛАИКОВНА",
+    "phone": "87073992617"
+  },
+  {
+    "id": "1772885273612-174",
+    "childName": "Кусаинов Адиль Сейдгалиевич",
+    "login": "710621450532",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖАМИЛЯ ХАМИТОВА АУЛИЕХАНОВНА",
+    "phone": "87771149833"
+  },
+  {
+    "id": "1772885273612-175",
+    "childName": "Стацко Дмитрий Максимович",
+    "login": "900625450900",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЛЮДМИЛА ШЕВЕЛА АЛЕКСАНДРОВНА",
+    "phone": "87029556442"
+  },
+  {
+    "id": "1772885273612-176",
+    "childName": "Камитова Лола Сергеевна",
+    "login": "700101407326",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НАУРУЗОВА ЖАНАТ АМАНЖОЛОВНА",
+    "phone": "87002631510"
+  },
+  {
+    "id": "1772885273612-177",
+    "childName": "МИНДИАШВИЛИ ДАВИД ВЯЧЕСЛАВОВИЧ",
+    "login": "890918450562",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ВАЛЕРИЯ МИНДИАШВИЛИ ВЛАДИМИРОВНА",
+    "phone": "87051234487"
+  },
+  {
+    "id": "1772885273612-178",
+    "childName": "Гугленко София Сергеевна",
+    "login": "920203451284",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СОКОЛОВА ВАЛЕНТИНА СЕРГЕЕВНА",
+    "phone": "87073431187"
+  },
+  {
+    "id": "1772885273612-179",
+    "childName": "Рерих Кирилл Викторович",
+    "login": "990606451555",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ВИКТОРИЯ РЕРИХ ВАЛЕРЬЕВНА",
+    "phone": "87474063785"
+  },
+  {
+    "id": "1772885273612-180",
+    "childName": "Городничая Полина Евгеньевна",
+    "login": "940710450454",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ОЛЬГА ГОРОДНИЧАЯ КОНСТАНТИНОВНА",
+    "phone": "87018964132"
+  },
+  {
+    "id": "1772885273612-181",
+    "childName": "Чичкина Анастасия Евгеньевна",
+    "login": "670227300449",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕВГЕНИЙ ЧИЧКИН НИКОЛАЕВИЧ",
+    "phone": "87757317050"
+  },
+  {
+    "id": "1772885273612-182",
+    "childName": "Тулба Юлия Евгеньевна",
+    "login": "880223450215",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ОЛЬГА ТУЛБА ВАСИЛЬЕВНА",
+    "phone": "87082583868"
+  },
+  {
+    "id": "1772885273612-183",
+    "childName": "Килыкешова Малика Кияковна",
+    "login": "730408400145",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ДАРИХА НУГМАНОВА АНАТОЛЬЕВНА",
+    "phone": "87788258759"
+  },
+  {
+    "id": "1772885273612-184",
+    "childName": "Чернявская Арина Родионовна",
+    "login": "831011450147",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНАСТАСИЯ ЧЕРНЯВСКАЯ СЕРГЕЕВНА",
+    "phone": "87472648605"
+  },
+  {
+    "id": "1772885273612-185",
+    "childName": "Чернявский Кирилл Родионович",
+    "login": "831011450147",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНАСТАСИЯ ЧЕРНЯВСКАЯ СЕРГЕЕВНА",
+    "phone": "87472648605"
+  },
+  {
+    "id": "1772885273612-186",
+    "childName": "Сейтжан Дамир",
+    "login": "720723400651",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НУРИЯ БАЛШИКБАЕВА СЕЙТЖАНОВНА",
+    "phone": "87071621686"
+  },
+  {
+    "id": "1772885273612-187",
+    "childName": "Ысаев Ернар Усенович",
+    "login": "800103450436",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛЖАН СЕРИКБАЕВА ОМАРОВНА",
+    "phone": "87470343065"
+  },
+  {
+    "id": "1772885273612-188",
+    "childName": "Пирмуродова Гулсезим Артуровна",
+    "login": "910511001067",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НАЗКЕН БАКТЫБАЕВА АЛИКУЛОВНА",
+    "phone": "87753148227"
+  },
+  {
+    "id": "1772885273612-189",
+    "childName": "Мальцев Иван Сергеевич",
+    "login": "830215451240",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "МАЛЬЦЕВА ОЛЕСЯ АЛЕКСЕЕВНА",
+    "phone": "87475391703"
+  },
+  {
+    "id": "1772885273612-190",
+    "childName": "Досназар Айару Күншығарқызы",
+    "login": "810102450748",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "КУАНЫШКУЛ ЖУЗЖАСАРОВА УТЕБЕКОВНА",
+    "phone": "87028629740"
+  },
+  {
+    "id": "1772885273612-191",
+    "childName": "Раушанбекова Айлана Жанибековна",
+    "login": "960621450276",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛИНА МУРСАЛОВА БАУРЖАНОВНА",
+    "phone": "87028796293"
+  },
+  {
+    "id": "1772885273612-192",
+    "childName": "Кешубаев Алан Канатович",
+    "login": "880913451264",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛЁНА КЕШУБАЕВА ВАСИЛЬЕВНА",
+    "phone": "87471261557"
+  },
+  {
+    "id": "1772885273612-193",
+    "childName": "Шамкин Тимофей Кириллович",
+    "login": "911130450637",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ИРИНА ШАМКИНА ВЛАДИМИРОВНА",
+    "phone": "87711665635"
+  },
+  {
+    "id": "1772885273612-194",
+    "childName": "Бектемирова Тамерис Куандыковна",
+    "login": "920831451000",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "МАХАББАТ УРАЗБАЕВА САПАРГАЛИЕВНА",
+    "phone": "87714694922"
+  },
+  {
+    "id": "1772885273612-195",
+    "childName": "Сапанова Данеля Денисовна",
+    "login": "820819350208",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ДЕНИС САПАНОВ БАКЫТЖАНОВИЧ",
+    "phone": "87759685029"
+  },
+  {
+    "id": "1772885273612-196",
+    "childName": "Лейнингер Максим Витальевич",
+    "login": "841029450256",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕВГЕНИЯ ЛЕЙНИНГЕР ВЯЧЕСЛАВОВНА",
+    "phone": "87778793613"
+  },
+  {
+    "id": "1772885273612-197",
+    "childName": "Жасулан Тамерлан Болатулы",
+    "login": "840922450149",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙЖАН КАКИМОВА ЧАПАЕВНА",
+    "phone": "87475147623"
+  },
+  {
+    "id": "1772885273612-198",
+    "childName": "Долгопятая Елизавета Максимовна",
+    "login": "860603451245",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ОЛЬГА ДОЛГОПЯТАЯ СЕРГЕЕВНА",
+    "phone": "87074167359"
+  },
+  {
+    "id": "1772885273612-199",
+    "childName": "Долгопятая Марьяна Максимовна",
+    "login": "860603451245",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ОЛЬГА ДОЛГОПЯТАЯ СЕРГЕЕВНА",
+    "phone": "87074167359"
+  },
+  {
+    "id": "1772885273612-200",
+    "childName": "Долгопятая Ульяна Максимовна",
+    "login": "860603451245",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ОЛЬГА ДОЛГОПЯТАЯ СЕРГЕЕВНА",
+    "phone": "87074167359"
+  },
+  {
+    "id": "1772885273612-201",
+    "childName": "Перова Амина Сергеевна",
+    "login": "940314450654",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "КРИСТИНА ПЕРОВА МИХАЙЛОВНА",
+    "phone": "87477320921"
+  },
+  {
+    "id": "1772885273612-202",
+    "childName": "Богодерова Таисия Олеговна",
+    "login": "830215450113",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЮЛИЯ БОГОДЕРОВА ВЛАДИМИРОВНА",
+    "phone": "87476783317"
+  },
+  {
+    "id": "1772885273612-203",
+    "childName": "Богодерова Евгения Олеговна",
+    "login": "830215450113",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЮЛИЯ БОГОДЕРОВА ВЛАДИМИРОВНА",
+    "phone": "87476783317"
+  },
+  {
+    "id": "1772885273612-204",
+    "childName": "Гертье Артур Никитич",
+    "login": "940525450141",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕВГЕНИЯ ГЕРТЬЕ АЛЕКСАНДРОВНА",
+    "phone": "87477636938"
+  },
+  {
+    "id": "1772885273612-205",
+    "childName": "Лосева Алина Анатольевна",
+    "login": "841009450851",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙГУЛЬ ЛОСЕВА ЖАНАЙДАРОВНА",
+    "phone": "87054500517"
+  },
+  {
+    "id": "1772885273612-206",
+    "childName": "Сейдуллаев Саян Абидуллаевич",
+    "login": "850122351582",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АБИДУЛЛА КУШЕНОВ СЕЙДУЛЛАЕВИЧ",
+    "phone": "87753548362"
+  },
+  {
+    "id": "1772885273612-207",
+    "childName": "Жанабай Әлия Қалмұратқызы",
+    "login": "951211450466",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ФАРИЗА УМИРЗАКОВА ХАНТУРЕВНА",
+    "phone": "87472327751"
+  },
+  {
+    "id": "1772885273612-208",
+    "childName": "Жанабай Альбина Қалмұратқызы",
+    "login": "951211450466",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ФАРИЗА УМИРЗАКОВА ХАНТУРЕВНА",
+    "phone": "87472327751"
+  },
+  {
+    "id": "1772885273612-209",
+    "childName": "Кази Нурай Жанибекқызы",
+    "login": "801205400774",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГАУХАР ТАБАЖАНОВА КУЛЬМУХАМБЕТОВНА",
+    "phone": "87088905242"
+  },
+  {
+    "id": "1772885273612-210",
+    "childName": "Джангушкарова Айла Талайбековна",
+    "login": "910119350668",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ТАЛАЙБЕК ДЖАНГУШКАРОВ ХАЗИЕВИЧ",
+    "phone": "87759864725"
+  },
+  {
+    "id": "1772885273612-211",
+    "childName": "Аймағанбет Аружан Серікжанқызы",
+    "login": "890211450599",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "МАЙНА НАЗАРОВА АЙБЕКОВНА",
+    "phone": "87072270499"
+  },
+  {
+    "id": "1772885273612-212",
+    "childName": "Аймаганбет Нурила Серикжанкызы",
+    "login": "890211450599",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "МАЙНА НАЗАРОВА АЙБЕКОВНА",
+    "phone": "87072270499"
+  },
+  {
+    "id": "1772885273612-213",
+    "childName": "Данияр Бекболат Думанұлы",
+    "login": "921017450703",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "САЛТАНАТ БЕГАЙДАРОВА БАЛТАБАЕВНА",
+    "phone": "87079527503"
+  },
+  {
+    "id": "1772885273612-214",
+    "childName": "Курбала Алиса Александровна",
+    "login": "900701450339",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НАДЕЖДА КУРБАЛА АЛЕКСАНДРОВНА",
+    "phone": "87076824485"
+  },
+  {
+    "id": "1772885273612-215",
+    "childName": "Иванова Диана Петровна",
+    "login": "851220451294",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЛАРИСА ШКРЕБТИЕНКО КОНСТАНТИНОВНА",
+    "phone": "87071735290"
+  },
+  {
+    "id": "1772885273612-216",
+    "childName": "Аралбай Ақтолқын Телеуханқызы",
+    "login": "780223402715",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ДАМЕГУЛЬ ГАПБАСОВА САГИЕВНА",
+    "phone": "87771960434"
+  },
+  {
+    "id": "1772885273612-217",
+    "childName": "Ростова Арина Сергеевна",
+    "login": "900708450307",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АННА РОСТОВА АЛЕКСАНДРОВНА",
+    "phone": "87473075994"
+  },
+  {
+    "id": "1772885273612-218",
+    "childName": "Ержанова Дарина Базарбаевна",
+    "login": "710129450052",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛИЯ ЕРЖАНОВА БАЗАРБАЕВНА",
+    "phone": "87058324200"
+  },
+  {
+    "id": "1772885273612-219",
+    "childName": "Юсупова Ясмин Нурлановна",
+    "login": "900304450370",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕКАТЕРИНА ОРЛОВА АНАТОЛЬЕВНА",
+    "phone": "87474901474"
+  },
+  {
+    "id": "1772885273612-220",
+    "childName": "Cұлтанғали Сабина Медетқызы",
+    "login": "890413451525",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЛАУРА СУЛТАНГАЛИЕВА МУРАТБЕКОВНА",
+    "phone": "87757494773"
+  },
+  {
+    "id": "1772885273612-221",
+    "childName": "Кенжегала Нурислам Медетулы",
+    "login": "890413451525",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЛАУРА СУЛТАНГАЛИЕВА МУРАТБЕКОВНА",
+    "phone": "87757494773"
+  },
+  {
+    "id": "1772885273612-222",
+    "childName": "Даирова Ясмина Наримановна",
+    "login": "930424450686",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ТАТЬЯНА НАСИБОВА АЛЕКСАНДРОВНА",
+    "phone": "87714365222"
+  },
+  {
+    "id": "1772885273612-223",
+    "childName": "Малофеева Вероника Владимировна",
+    "login": "821020450342",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "КСЕНИЯ МАЛОФЕЕВА ВЛАДИМИРОВНА",
+    "phone": "87776373889"
+  },
+  {
+    "id": "1772885273612-224",
+    "childName": "Айдарханов Нуржан Арманович",
+    "login": "830518401826",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖУЛДЫЗ АЙДАРХАНОВА БОРАМБЕКОВНА",
+    "phone": "87087545093"
+  },
+  {
+    "id": "1772885273612-225",
+    "childName": "Калашников Александр Сергеевич",
+    "login": "801015401066",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕЛЕНА КАТАЕВА АЛЕКСАНДРОВНА",
+    "phone": "87476472638"
+  },
+  {
+    "id": "1772885273612-226",
+    "childName": "Горобец Полина Дмитриевна",
+    "login": "890704450648",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ТАТЬЯНА ГОРОБЕЦ РАДИОНОВНА",
+    "phone": "87470141277"
+  },
+  {
+    "id": "1772885273612-227",
+    "childName": "Юшкова Милена Георгиевна",
+    "login": "940603451024",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "КРИСТИНА ЮШКОВА ЮРЬЕВНА",
+    "phone": "87750196489"
+  },
+  {
+    "id": "1772885273612-228",
+    "childName": "Сейдулла Асем Абидуллақызы",
+    "login": "850122351582",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АБИДУЛЛА КУШЕНОВ СЕЙДУЛЛАЕВИЧ",
+    "phone": "87753548362"
+  },
+  {
+    "id": "1772885273612-229",
+    "childName": "Тонковид Анастасия Васильевна",
+    "login": "821016450747",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕЛЕНА КОСОЛАПОВА ВИКТОРОВНА",
+    "phone": "87071966742"
+  },
+  {
+    "id": "1772885273612-230",
+    "childName": "Воробьев Артем Сергеевич",
+    "login": "830604450405",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕКАТЕРИНА ВОРОБЬЕВА НИКОЛАЕВНА",
+    "phone": "87024370820"
+  },
+  {
+    "id": "1772885273612-231",
+    "childName": "Дивеев Арсений Эдуардович",
+    "login": "860623450612",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "МАРИЯ ДИВЕЕВА СЕРГЕЕВНА",
+    "phone": "87470343802"
+  },
+  {
+    "id": "1772885273612-232",
+    "childName": "Исмагомбетова Дарина Артуровна",
+    "login": "860829499020",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЮЛИЯ СУРНИНА АЛЕКСАНДРОВНА",
+    "phone": "87054045734"
+  },
+  {
+    "id": "1772885273612-233",
+    "childName": "Дүйсен Сания Ерланқызы",
+    "login": "871215450669",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНАРА ИМАНБАЕВА СЫРЫМОВНА",
+    "phone": "87780878899"
+  },
+  {
+    "id": "1772885273612-234",
+    "childName": "Дүйсен Аиша Ерланқызы",
+    "login": "871215450669",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНАРА ИМАНБАЕВА СЫРЫМОВНА",
+    "phone": "87780878899"
+  },
+  {
+    "id": "1772885273612-235",
+    "childName": "Иманова Алина Амангельдиновна",
+    "login": "721111400161",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙНАШ ИМАНОВА МЫРЗАШЕВНА",
+    "phone": "87474930572"
+  },
+  {
+    "id": "1772885273612-236",
+    "childName": "Тастемиров Муслим Саятович",
+    "login": "920714451123",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЭЛЬМИРА ТАСТЕМИРОВА САТЫБАЛДИНОВНА",
+    "phone": "87754439505"
+  },
+  {
+    "id": "1772885273612-237",
+    "childName": "Ермағанбет Айлана Арманқызы",
+    "login": "880120450275",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "САЛТАНАТ ЖӘМІШ СЕКЕНҚЫЗЫ",
+    "phone": "87053211152"
+  },
+  {
+    "id": "1772885273612-238",
+    "childName": "Ерғали  Нарғыз Болатқызы",
+    "login": "741105400320",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ФАТИМА АЙТЫМОВА АБДУЛЛОВНА",
+    "phone": "87473473803"
+  },
+  {
+    "id": "1772885273612-239",
+    "childName": "Ерғали Айгерім Болатқызы",
+    "login": "741105400320",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ФАТИМА АЙТЫМОВА АБДУЛЛОВНА",
+    "phone": "87473473803"
+  },
+  {
+    "id": "1772885273612-240",
+    "childName": "Сейітжан  Адия Нұрланқызы",
+    "login": "900824000495",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНАРГУЛЬ МУРТАЗИНА ТЕМЕРБОЛАТОВНА",
+    "phone": "87071500928"
+  },
+  {
+    "id": "1772885273612-241",
+    "childName": "Муртазина Айша Нурлановна",
+    "login": "900824000495",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНАРГУЛЬ МУРТАЗИНА ТЕМЕРБОЛАТОВНА",
+    "phone": "87071500928"
+  },
+  {
+    "id": "1772885273612-242",
+    "childName": "Құрымбай Әбілмансұр Ерланұлы",
+    "login": "970516451097",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "МАДИНА КУРУМБАЕВА КАИРЖАНОВНА",
+    "phone": "87054045662"
+  },
+  {
+    "id": "1772885273612-243",
+    "childName": "Әкімжан Нұрай Азаматқызы",
+    "login": "930527450626",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "САБИНА АБИЛЬМАЖИНОВА ШАЙКЕНОВНА",
+    "phone": "87711077086"
+  },
+  {
+    "id": "1772885273612-244",
+    "childName": "Әкімжан Аружан Азаматқызы",
+    "login": "930527450626",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "САБИНА АБИЛЬМАЖИНОВА ШАЙКЕНОВНА",
+    "phone": "87711077086"
+  },
+  {
+    "id": "1772885273612-245",
+    "childName": "Танкенова Инжу Сериковна",
+    "login": "841213450197",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЗУЛЬФИЯ НУРАХАЕВА ЖАСУЛАНОВНА",
+    "phone": "87001900061"
+  },
+  {
+    "id": "1772885273612-246",
+    "childName": "Талап Адия Бауржанқызы",
+    "login": "831231450699",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "САДИРОВА ГУЛЬМИРА САТТОРБЕКОВНА",
+    "phone": "87076947604"
+  },
+  {
+    "id": "1772885273612-247",
+    "childName": "Ахтаева  Диана Жамисаровна",
+    "login": "760708401137",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЛАЗАТ АХТАЕВА АМАНГЕЛЬДИНОВНА",
+    "phone": "87052311343"
+  },
+  {
+    "id": "1772885273612-248",
+    "childName": "Даулетқан Заңғар Қадырсізұлы",
+    "login": "820118403083",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛМАГҮЛ ҚАПАШ",
+    "phone": "87078133956"
+  },
+  {
+    "id": "1772885273612-249",
+    "childName": "Ким Даяна Евгеньевна",
+    "login": "880912450974",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛЬНАР КИМ АМАНГЕЛЬДЫЕВНА",
+    "phone": "87071177735"
+  },
+  {
+    "id": "1772885273612-250",
+    "childName": "Берік Айым Раимжанқызы",
+    "login": "841123401467",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛЬНАЗ БОРАМБАЕВА МЕЙРАМХАНОВНА",
+    "phone": "87054133188"
+  },
+  {
+    "id": "1772885273612-251",
+    "childName": "Старкова Екатерина Викторовна",
+    "login": "860625451027",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АННА СТАРКОВА СЕРГЕЕВНА",
+    "phone": "87478713034"
+  },
+  {
+    "id": "1772885273612-252",
+    "childName": "Ибраева Айжан",
+    "login": "770929400713",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "КУЛЯШ ИБРАЕВА ЖАНАБЕРГЕНОВНА",
+    "phone": "87477249870"
+  },
+  {
+    "id": "1772885273612-253",
+    "childName": "Алибекова Айбике Несипбековна",
+    "login": "800703401787",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЛАУРА АЛИБЕКОВА БОЛАТОВНА",
+    "phone": "87024469994"
+  },
+  {
+    "id": "1772885273612-254",
+    "childName": "Тугучева Ксения Денисовна",
+    "login": "810531450287",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕЛЕНА НОВИКОВА СЕРГЕЕВНА",
+    "phone": "87478076087"
+  },
+  {
+    "id": "1772885273612-255",
+    "childName": "АЛИБЕКОВ  НУРБЕК  НЕСИПБЕКОВИЧ",
+    "login": "800703401787",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЛАУРА АЛИБЕКОВА БОЛАТОВНА",
+    "phone": "87024469994"
+  },
+  {
+    "id": "1772885273612-256",
+    "childName": "Аскарова Нурай Асхатовна",
+    "login": "920106450249",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖАНАР ЕМЕНАЛИНА ЕРКИНОВНА",
+    "phone": "87711740074"
+  },
+  {
+    "id": "1772885273612-257",
+    "childName": "Зәйтөн Санжар Ақылбекұлы",
+    "login": "791216450250",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "РАУШАН БЕЙСЕНОВА АЯГАНОВНА",
+    "phone": "87778957849"
+  },
+  {
+    "id": "1772885273612-258",
+    "childName": "Алибеков Райымбек Несипбекович",
+    "login": "800703401787",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЛАУРА АЛИБЕКОВА БОЛАТОВНА",
+    "phone": "87024469994"
+  },
+  {
+    "id": "1772885273612-259",
+    "childName": "Старкова Ксения Викторовна",
+    "login": "860625451027",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АННА СТАРКОВА СЕРГЕЕВНА",
+    "phone": "87478713034"
+  },
+  {
+    "id": "1772885273612-260",
+    "childName": "Алибаева Томирис Махамбетовна",
+    "login": "780321400548",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛЬНАРА АЛИБАЕВА АДИЛЬБЕКОВНА",
+    "phone": "87716679197"
+  },
+  {
+    "id": "1772885273612-261",
+    "childName": "Сатин Дархан Смаилович",
+    "login": "780602400911",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖАННА САТИНА ЖУМАЕВНА",
+    "phone": "87051629839"
+  },
+  {
+    "id": "1772885273612-262",
+    "childName": "Анацкий Роман Иванович",
+    "login": "890526450026",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ВАЛЕНТИНА АНАЦКАЯ АНАТОЛЬЕВНА",
+    "phone": "87051196162"
+  },
+  {
+    "id": "1772885273612-263",
+    "childName": "Ғалым Әмір Ерғалиұлы",
+    "login": "860108451046",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖУЛДЫЗ ТУРЕНОВА БАТЫРБЕКОВНА",
+    "phone": "87777631223"
+  },
+  {
+    "id": "1772885273612-264",
+    "childName": "Ризванов Даниил Вадимович",
+    "login": "870604450402",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ОЛЬГА РИЗВАНОВА ИГОРЕВНА",
+    "phone": "87056502221"
+  },
+  {
+    "id": "1772885273612-265",
+    "childName": "Қамит  Әлнұр Ерланұлы",
+    "login": "811111450513",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АСЕМГУЛЬ ЖУНУСОВА ЖАМУРОВНА",
+    "phone": "87779014433"
+  },
+  {
+    "id": "1772885273612-266",
+    "childName": "Еслям Алан Диасұлы",
+    "login": "840612450588",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ИЛЬМИРА КУДАЙБЕРГЕНОВА БАКЫТБЕКОВНА",
+    "phone": "87757644557"
+  },
+  {
+    "id": "1772885273612-267",
+    "childName": "Клипперт Варвара Алексеевна",
+    "login": "850217350914",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛЕКСЕЙ КЛИППЕРТ АЛЕКСАНДРОВИЧ",
+    "phone": "87779237482"
+  },
+  {
+    "id": "1772885273612-268",
+    "childName": "Рахметова Жанеля Ерлановна",
+    "login": "780703401314",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛЬМИРА БАДАГУЛОВА ОРАЛТАЕВНА",
+    "phone": "87473006428"
+  },
+  {
+    "id": "1772885273612-269",
+    "childName": "Кайдар  Наргиз Бекалыулы",
+    "login": "761219450579",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "РАЙХАНА АУБАКИРОВА КАМЗЕЕВНА",
+    "phone": "87471982252"
+  },
+  {
+    "id": "1772885273612-270",
+    "childName": "Сатыбалды Әли Қазбекұлы",
+    "login": "740111400310",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЛАЗЗАТ ШАЙМЕРГЕНОВА МАНАРБЕКОВНА",
+    "phone": "87771397441"
+  },
+  {
+    "id": "1772885273612-271",
+    "childName": "Сатыбалды Дархан Қазбекұлы",
+    "login": "740111400310",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЛАЗЗАТ ШАЙМЕРГЕНОВА МАНАРБЕКОВНА",
+    "phone": "87771397441"
+  },
+  {
+    "id": "1772885273612-272",
+    "childName": "Кайдар  Абылайхан Бекалыулы",
+    "login": "761219450579",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "РАЙХАНА АУБАКИРОВА КАМЗЕЕВНА",
+    "phone": "87471982252"
+  },
+  {
+    "id": "1772885273612-273",
+    "childName": "Абилькаиров Мирон Арманович",
+    "login": "920709450445",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕЛЕНА БУТАКОВА НИКОЛАЕВНА",
+    "phone": "87713615934"
+  },
+  {
+    "id": "1772885273612-274",
+    "childName": "Әділбек Әділжан Қорғанбекұлы",
+    "login": "810605450348",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АСЕЛЬ БЕЙСЕНБИНА САГЫНДЫКОВНА",
+    "phone": "87012112219"
+  },
+  {
+    "id": "1772885273612-275",
+    "childName": "Байдрахманова Амира Куанышевна",
+    "login": "841026000327",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "КУРАЛАЙ БАЙДРАХМАНОВА СЕРИКОВНА",
+    "phone": "87058903102"
+  },
+  {
+    "id": "1772885273612-276",
+    "childName": "Жолмұқан Жанель Аралқызы",
+    "login": "750201300286",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АРАЛ ЖОЛМУХАНОВ КОЛИАСКЕРОВИЧ",
+    "phone": "77051021818"
+  },
+  {
+    "id": "1772885273612-277",
+    "childName": "Мейрам Алибек Амиржанұлы",
+    "login": "990802450681",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙГЕРИМ ТЕМИРХАНОВА ЕРКЕНОВНА",
+    "phone": "87071999032"
+  },
+  {
+    "id": "1772885273612-278",
+    "childName": "Гончарова Кира Николаевна",
+    "login": "840908451428",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ТАТЬЯНА ГОНЧАРОВА ГРИГОРЬЕВНА",
+    "phone": "87759218705"
+  },
+  {
+    "id": "1772885273612-279",
+    "childName": "Қатран  Медина Айбекқызы",
+    "login": "901020350303",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙБЕК КАРМАНОВ КАТРАНОВИЧ",
+    "phone": "87755118400"
+  },
+  {
+    "id": "1772885273612-280",
+    "childName": "Пархоменко кристина Михайловна",
+    "login": "920716451411",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНАСТАСИЯ ПАРХОМЕНКО ОЛЕГОВНА",
+    "phone": "87089405613"
+  },
+  {
+    "id": "1772885273612-281",
+    "childName": "Кукенов Диас Ринатович",
+    "login": "881227451387",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АСЫЛ КУКЕНОВА НУРГАЛИЕВНА",
+    "phone": "87773830438"
+  },
+  {
+    "id": "1772885273612-282",
+    "childName": "Гончаров Глеб Николаевич",
+    "login": "840908451428",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ТАТЬЯНА ГОНЧАРОВА ГРИГОРЬЕВНА",
+    "phone": "87759218705"
+  },
+  {
+    "id": "1772885273612-283",
+    "childName": "Қатран Сұлтан Айбекұлы",
+    "login": "901020350303",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙБЕК КАРМАНОВ КАТРАНОВИЧ",
+    "phone": "87755118400"
+  },
+  {
+    "id": "1772885273612-284",
+    "childName": "Пархоменко Елизавета Михайловна",
+    "login": "920716451411",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНАСТАСИЯ ПАРХОМЕНКО ОЛЕГОВНА",
+    "phone": "87089405613"
+  },
+  {
+    "id": "1772885273612-285",
+    "childName": "Рашит Тамирис Рустамқызы",
+    "login": "881017451068",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙГЕРИМ ЖАКСЫБАЕВА ТАТТЫМБЕТОВНА",
+    "phone": "87719778889"
+  },
+  {
+    "id": "1772885273612-286",
+    "childName": "Бейсембаев Амирхан Канатович",
+    "login": "810726450297",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "МАРЖАН БЕЙСЕМБАЕВА КАРАМАНОВНА",
+    "phone": "87471982313"
+  },
+  {
+    "id": "1772885273612-287",
+    "childName": "Зайцева Милана Эмильевна",
+    "login": "931021350790",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЭМИЛЬ ЗАЙЦЕВ ЛЕОНИДОВИЧ",
+    "phone": "87712892620"
+  },
+  {
+    "id": "1772885273612-288",
+    "childName": "Тлеужанова Дильназ Руслановна",
+    "login": "901221450628",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕКАТЕРИНА БАЛАГУРОВА ВАЛЕРЬЕВНА",
+    "phone": "87771924777"
+  },
+  {
+    "id": "1772885273612-289",
+    "childName": "Список Мария Александровна",
+    "login": "811120350576",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛЕКСАНДР СПИСОК ВЛАДИМИРОВИЧ",
+    "phone": "87019832013"
+  },
+  {
+    "id": "1772885273612-290",
+    "childName": "Жамақ Даяна Аманжолқызы",
+    "login": "760805301973",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АМАНЖОЛ КАЗИЕВ ЖАМАКОВИЧ",
+    "phone": "87054153765"
+  },
+  {
+    "id": "1772885273612-291",
+    "childName": "Есембек Аяла Өміржанқызы",
+    "login": "870621451314",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙГЕРИМ ЕСЕМБЕКОВА КОШЕРБАЕВНА",
+    "phone": "87751724235"
+  },
+  {
+    "id": "1772885273612-292",
+    "childName": "Жамалов Мейіржан Жамбылұлы",
+    "login": "810316401775",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ТУРСЫНАЙ КЕРИМБЕКОВА КУДРЕТОВНА",
+    "phone": "87785317662"
+  },
+  {
+    "id": "1772885273612-293",
+    "childName": "Есембек Айсана Өміржанқызы",
+    "login": "870621451314",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙГЕРИМ ЕСЕМБЕКОВА КОШЕРБАЕВНА",
+    "phone": "87751724235"
+  },
+  {
+    "id": "1772885273612-294",
+    "childName": "Қуаныш Іңкәр Бекжанқызы",
+    "login": "870126450870",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "САМАЛ НУРГАЛИЕВА АСКАРОВНА",
+    "phone": "87011664405"
+  },
+  {
+    "id": "1772885273612-295",
+    "childName": "Хохлова Ева Евгеньевна",
+    "login": "840513450541",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ОЛЬГА ЕРЁМОЧКИНА ВЛАДИМИРОВНА",
+    "phone": "87711744753"
+  },
+  {
+    "id": "1772885273612-296",
+    "childName": "Хохлова Аврора Евгеньевна",
+    "login": "840513450541",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ОЛЬГА ЕРЁМОЧКИНА ВЛАДИМИРОВНА",
+    "phone": "87711744753"
+  },
+  {
+    "id": "1772885273612-297",
+    "childName": "Ермағанбет Айғаным Арманқызы",
+    "login": "880120450275",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "САЛТАНАТ ЖӘМІШ СЕКЕНҚЫЗЫ",
+    "phone": "87053211152"
+  },
+  {
+    "id": "1772885273612-298",
+    "childName": "Кулик  Анжелика Владимировна",
+    "login": "831017451366",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЕЛЕНА НИСТРАТОВА СЕРГЕЕВНА",
+    "phone": "87055103888"
+  },
+  {
+    "id": "1772885273612-299",
+    "childName": "Шерстобитов Макар Денисович",
+    "login": "820529450248",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СВЕТЛАНА БАБОШИНА ВИКТОРОВНА",
+    "phone": "87773240324"
+  },
+  {
+    "id": "1772885273612-300",
+    "childName": "Брилькова Екатерина Станиславовна",
+    "login": "901018450913",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЛЮДМИЛА БРИЛЬКОВА ГЕННАДЬЕВНА",
+    "phone": "87776597754"
+  },
+  {
+    "id": "1772885273612-301",
+    "childName": "Шевченко Михаил Сергеевич",
+    "login": "831110451430",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ОЛЬГА ШВАБАУЭР МИХАЙЛОВНА",
+    "phone": "87773242720"
+  },
+  {
+    "id": "1772885273612-302",
+    "childName": "Касенова  Аделя Кумаровна",
+    "login": "891218450582",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЙГУЛЬ КАСЕНОВА АБЛАЕВНА",
+    "phone": "87787674678"
+  },
+  {
+    "id": "1772885273612-303",
+    "childName": "Ермек Айнұр Айдарқызы",
+    "login": "971118450962",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АРАЙ ЕРМЕК БУРАНБАЕВНА",
+    "phone": "87479181197"
+  },
+  {
+    "id": "1772885273612-304",
+    "childName": "Досым Санжар Ерболатұлы",
+    "login": "830426450666",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ЖАНИЯ КАНАПИНА ШАЯХМЕТОВНА",
+    "phone": "87058892755"
+  },
+  {
+    "id": "1772885273612-305",
+    "childName": "Увалиева Аружан Куанышевна",
+    "login": "960809351282",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "КУАНЫШ УВАЛИЕВ ЕГИБАЕВИЧ",
+    "phone": "87478118390"
+  },
+  {
+    "id": "1772885273612-306",
+    "childName": "Аскаров Арсен Мадиярович",
+    "login": "880709450742",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АСЕМГУЛЬ АСКАРОВА АЛТАЕВНА",
+    "phone": "87714238900"
+  },
+  {
+    "id": "1772885273612-307",
+    "childName": "Куликова Ульяна Андреевна",
+    "login": "811211350808",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНДРЕЙ КУЛИКОВ БОРИСОВИЧ",
+    "phone": "87776736123"
+  },
+  {
+    "id": "1772885273612-308",
+    "childName": "Кутузова Милана Владимировна",
+    "login": "900612451214",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СВЕТЛАНА КУТУЗОВА ЕВГЕНЬЕВНА",
+    "phone": "87471260376"
+  },
+  {
+    "id": "1772885273612-309",
+    "childName": "Шенчуковская Виктория Владимировна",
+    "login": "900612451214",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СВЕТЛАНА КУТУЗОВА ЕВГЕНЬЕВНА",
+    "phone": "87471260376"
+  },
+  {
+    "id": "1772885273612-310",
+    "childName": "Кукенов Самир Ринатович",
+    "login": "881227451387",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АСЫЛ КУКЕНОВА НУРГАЛИЕВНА",
+    "phone": "87773830438"
+  },
+  {
+    "id": "1772885273612-311",
+    "childName": "Дүйсен Асия Ерланқызы",
+    "login": "871215450669",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АНАРА ИМАНБАЕВА СЫРЫМОВНА",
+    "phone": "87780878899"
+  },
+  {
+    "id": "1772885273612-312",
+    "childName": "Сабдинова Самира Наримановна",
+    "login": "840225499053",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "САЛТАЛА САБДИНОВА ЖУМАЖАНОВНА",
+    "phone": "87056504411"
+  },
+  {
+    "id": "1772885273612-313",
+    "childName": "Амренова Лина Жаслановна",
+    "login": "930731450299",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "НАЗИРА АМРЕНОВА ЖАНБОЛАТОВНА",
+    "phone": "77479817869"
+  },
+  {
+    "id": "1772885273612-314",
+    "childName": "Кушкеева  Сания Маратовна",
+    "login": "820621450614",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "КЫМБАТ КУШКЕЕВА ОРАЗАЛИЕВНА",
+    "phone": "87773257873"
+  },
+  {
+    "id": "1772885273612-315",
+    "childName": "Кушкеева  Анар Маратовна",
+    "login": "820621450614",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "КЫМБАТ КУШКЕЕВА ОРАЗАЛИЕВНА",
+    "phone": "87773257873"
+  },
+  {
+    "id": "1772885273612-316",
+    "childName": "Әбумуслем Асылым Ерланқызы",
+    "login": "940822400754",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СЫМБАТ СЕРДАЛИНА ЗЕЙНИЛОВНА",
+    "phone": "87057940629"
+  },
+  {
+    "id": "1772885273612-317",
+    "childName": "Сайран Айлана Олжасқызы",
+    "login": "890721450571",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "БАЯН ТЕНИСБАЕВА ЖАМБЫЛОВНА",
+    "phone": "87757511175"
+  },
+  {
+    "id": "1772885273612-318",
+    "childName": "Назымбек Аружан Айдарбекқызы",
+    "login": "830722450655",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ДИНАРА АЙКЕНОВА АМАНГЕЛЬДЫЕВНА",
+    "phone": "87785835216"
+  },
+  {
+    "id": "1772885273612-319",
+    "childName": "Зайцева Дарья Леонидовна",
+    "login": "891116451246",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "СВЕТЛАНА ЗАЙЦЕВА ВЛАДИМИРОВНА",
+    "phone": "87776806381"
+  },
+  {
+    "id": "1772885273612-320",
+    "childName": "Солодникова Каролина Максимовна",
+    "login": "870905351331",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "МАКСИМ СОЛОДНИКОВ АЛЕКСАНДРОВИЧ",
+    "phone": "87074847940"
+  },
+  {
+    "id": "1772885273612-321",
+    "childName": "Алмасбекқызы Ляйсан",
+    "login": "850405450615",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ГУЛЬДЕН ЖУНУСОВА БАГЫТОВНА",
+    "phone": "87711076764"
+  },
+  {
+    "id": "1772885273612-322",
+    "childName": "Чеботарь Анастасия Андреевна",
+    "login": "860202450257",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "ТАТЬЯНА ЧЕБОТАРЬ ВЛАДИМИРОВНА",
+    "phone": "87712899123"
+  },
+  {
+    "id": "1772885273612-323",
+    "childName": "Садық Айкөркем Бауржанқызы",
+    "login": "920716450324",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "АЛТЫН ОМАРОВА БЕКЕЖАНОВНА",
+    "phone": "87769777575"
+  },
+  {
+    "id": "1772885273612-324",
+    "childName": "Темирбекова  Кира Канатовна",
+    "login": "941119450147",
+    "password": "Aa123456!",
+    "backupPassword1": "Aa123456@",
+    "backupPassword2": "",
+    "parentName": "КРИСТИНА ТЕМИРБЕКОВА ЭДУАРДОВНА",
+    "phone": "87053211048"
+  }
+]
