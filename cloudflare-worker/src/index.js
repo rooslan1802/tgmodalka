@@ -27,6 +27,31 @@ function escapeMarkdown(text) {
   return String(text || '').replace(/([_\-*\[\]()~`>#+=|{}.!])/g, '\\$1');
 }
 
+function bytesToBase64(bytes) {
+  let binary = '';
+  const chunk = 0x8000;
+  for (let i = 0; i < bytes.length; i += chunk) {
+    const sub = bytes.subarray(i, i + chunk);
+    binary += String.fromCharCode(...sub);
+  }
+  return btoa(binary);
+}
+
+function trimWithEllipsis(text, maxLen = 44) {
+  const value = String(text || '').trim();
+  if (value.length <= maxLen) return value;
+  return `${value.slice(0, Math.max(1, maxLen - 1)).trim()}...`;
+}
+
+function escapeXml(text) {
+  return String(text || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 async function tgApi(env, method, payload) {
   const token = String(env.BOT_TOKEN || '').trim();
   if (!token) throw new Error('BOT_TOKEN is missing');
@@ -39,6 +64,26 @@ async function tgApi(env, method, payload) {
   if (!data?.ok) {
     throw new Error(data?.description || `Telegram API ${method} failed`);
   }
+  return data.result;
+}
+
+async function tgApiMultipart(env, method, fields = {}, fileFieldName, fileBytes, fileName, contentType) {
+  const token = String(env.BOT_TOKEN || '').trim();
+  if (!token) throw new Error('BOT_TOKEN is missing');
+
+  const form = new FormData();
+  for (const [key, value] of Object.entries(fields)) {
+    if (value === undefined || value === null) continue;
+    form.set(key, String(value));
+  }
+  form.set(fileFieldName, new Blob([fileBytes], { type: contentType }), fileName);
+
+  const res = await fetch(`https://api.telegram.org/bot${token}/${method}`, {
+    method: 'POST',
+    body: form
+  });
+  const data = await res.json();
+  if (!data?.ok) throw new Error(data?.description || `Telegram API ${method} failed`);
   return data.result;
 }
 
@@ -56,6 +101,21 @@ async function sendPhoto(env, chatId, photoUrl, caption = '') {
     photo: photoUrl,
     caption
   });
+}
+
+async function sendDocument(env, chatId, bytes, fileName, caption = '', contentType = 'application/octet-stream') {
+  return tgApiMultipart(
+    env,
+    'sendDocument',
+    {
+      chat_id: chatId,
+      caption
+    },
+    'document',
+    bytes,
+    fileName,
+    contentType
+  );
 }
 
 async function answerCallback(env, callbackQueryId, text = '') {
@@ -286,6 +346,35 @@ function buildQrImageUrl(value) {
   return `https://api.qrserver.com/v1/create-qr-code/?size=1024x1024&margin=20&data=${encodeURIComponent(value)}`;
 }
 
+async function fetchQrPngBase64(qrUrl) {
+  const res = await fetch(qrUrl);
+  if (!res.ok) throw new Error(`QR fetch failed: HTTP ${res.status}`);
+  const bytes = new Uint8Array(await res.arrayBuffer());
+  return bytesToBase64(bytes);
+}
+
+function buildModalSvg({ childName, qrPngBase64 }) {
+  const safeName = escapeXml(trimWithEllipsis(childName || ''));
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg width="920" height="1100" viewBox="0 0 920 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="920" height="1100" fill="#d4ccc1"/>
+  <rect x="20" y="24" width="880" height="1030" rx="10" fill="#f4f5f8"/>
+  <text x="104" y="124" fill="#1f2440" font-size="56" font-weight="800" font-family="Arial, sans-serif">Подписание с помощью QR</text>
+  <text x="104" y="190" fill="#7b819b" font-size="42" font-family="Arial, sans-serif">Отсканируйте QR-код с помощью</text>
+  <text x="104" y="240" fill="#7b819b" font-size="42" font-family="Arial, sans-serif">мобильного приложения Egov Mobile</text>
+  <rect x="104" y="282" width="712" height="160" rx="14" fill="#f7dec8" stroke="#f2b17f" stroke-width="2"/>
+  <text x="130" y="334" fill="#1f2440" font-size="26" font-weight="700" font-family="Arial, sans-serif">После подписания в Egov Mobile, можете</text>
+  <text x="130" y="372" fill="#1f2440" font-size="26" font-weight="700" font-family="Arial, sans-serif">нажать на кнопку "Продолжить" или закрыть</text>
+  <text x="130" y="406" fill="#1f2440" font-size="26" font-weight="700" font-family="Arial, sans-serif">модальное окно</text>
+  <text x="104" y="490" fill="#6b7088" font-size="44" font-weight="700" font-family="Arial, sans-serif">${safeName}</text>
+  <text x="850" y="86" fill="#111" font-size="54" font-family="Arial, sans-serif">×</text>
+  <rect x="245" y="512" width="430" height="430" fill="#fff"/>
+  <image x="245" y="512" width="430" height="430" href="data:image/png;base64,${qrPngBase64}"/>
+  <rect x="245" y="930" width="430" height="86" rx="14" fill="#ff7400"/>
+  <text x="322" y="986" fill="#fff" font-size="46" font-weight="700" font-family="Arial, sans-serif">Продолжить</text>
+</svg>`;
+}
+
 async function generateQr(env, child) {
   const iin = cleanDigits(child.login);
   if (iin.length !== 12) {
@@ -340,6 +429,7 @@ async function generateQr(env, child) {
 
     return {
       success: true,
+      qrValue: link,
       qrUrl: buildQrImageUrl(link),
       passwordUsed: auth.passwordUsed,
       passwordUpdated: auth.passwordUpdated
@@ -465,11 +555,27 @@ async function handleCallbackQuery(env, callbackQuery) {
       caption += '\nПароль обновлен на запасной (как в Studia).';
     }
 
-    await sendPhoto(env, chatId, result.qrUrl, caption);
+    const qrPngBase64 = await fetchQrPngBase64(result.qrUrl);
+    const modalSvg = buildModalSvg({
+      childName: child.childName,
+      qrPngBase64
+    });
+    const modalBytes = new TextEncoder().encode(modalSvg);
+
+    await sendDocument(
+      env,
+      chatId,
+      modalBytes,
+      `modal-${cleanDigits(child.login) || child.id}.svg`,
+      caption,
+      'image/svg+xml'
+    );
+
+    await sendPhoto(env, chatId, result.qrUrl, 'QR отдельно (если SVG не открывается)');
     await sendMessage(
       env,
       chatId,
-      `Ссылка для подписи:\n${escapeMarkdown('Отсканируйте QR для подписи в Egov Mobile')}`,
+      `Модалка отправлена файлом SVG.\n${escapeMarkdown('Откройте файл и отсканируйте QR в Egov Mobile')}`,
       { parse_mode: 'MarkdownV2' }
     );
   } catch (error) {
