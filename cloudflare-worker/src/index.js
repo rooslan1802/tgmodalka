@@ -8,6 +8,7 @@ const API_URL = `${BASE_URL}/v1`;
 const CHILDREN_KEY = 'children:v1';
 const CHAT_STATE_PREFIX = 'chat-state:v1:';
 let wasmReady = false;
+let arialFontBytes = null;
 
 function jsonResponse(payload, status = 200) {
   return new Response(JSON.stringify(payload), {
@@ -40,6 +41,16 @@ function bytesToBase64(bytes) {
     binary += String.fromCharCode(...sub);
   }
   return btoa(binary);
+}
+
+function base64ToBytes(base64) {
+  const binary = atob(base64);
+  const len = binary.length;
+  const bytes = new Uint8Array(len);
+  for (let i = 0; i < len; i += 1) {
+    bytes[i] = binary.charCodeAt(i);
+  }
+  return bytes;
 }
 
 function trimWithEllipsis(text, maxLen = 44) {
@@ -435,30 +446,21 @@ function buildModalSvg({ childName, qrPngBase64 }) {
   const safeName = escapeXml(trimWithEllipsis(childName || ''));
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="920" height="1100" viewBox="0 0 920 1100" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    @font-face {
-      font-family: "ArialEmbedded";
-      src: url("data:font/ttf;base64,${ARIAL_TTF_BASE64}") format("truetype");
-    }
-    .f {
-      font-family: "ArialEmbedded";
-    }
-  </style>
   <rect width="920" height="1100" fill="#d4ccc1"/>
   <rect x="20" y="24" width="880" height="1030" rx="10" fill="#f4f5f8"/>
-  <text class="f" x="104" y="124" fill="#1f2440" font-size="56" font-weight="800">Подписание с помощью QR</text>
-  <text class="f" x="104" y="190" fill="#7b819b" font-size="42">Отсканируйте QR-код с помощью</text>
-  <text class="f" x="104" y="240" fill="#7b819b" font-size="42">мобильного приложения Egov Mobile</text>
+  <text x="104" y="124" fill="#1f2440" font-size="56" font-weight="800" font-family="Arial">Подписание с помощью QR</text>
+  <text x="104" y="190" fill="#7b819b" font-size="42" font-family="Arial">Отсканируйте QR-код с помощью</text>
+  <text x="104" y="240" fill="#7b819b" font-size="42" font-family="Arial">мобильного приложения Egov Mobile</text>
   <rect x="104" y="282" width="712" height="160" rx="14" fill="#f7dec8" stroke="#f2b17f" stroke-width="2"/>
-  <text class="f" x="130" y="334" fill="#1f2440" font-size="26" font-weight="700">После подписания в Egov Mobile, можете</text>
-  <text class="f" x="130" y="372" fill="#1f2440" font-size="26" font-weight="700">нажать на кнопку "Продолжить" или закрыть</text>
-  <text class="f" x="130" y="406" fill="#1f2440" font-size="26" font-weight="700">модальное окно</text>
-  <text class="f" x="104" y="490" fill="#6b7088" font-size="44" font-weight="700">${safeName}</text>
-  <text class="f" x="850" y="86" fill="#111" font-size="54">×</text>
+  <text x="130" y="334" fill="#1f2440" font-size="26" font-weight="700" font-family="Arial">После подписания в Egov Mobile, можете</text>
+  <text x="130" y="372" fill="#1f2440" font-size="26" font-weight="700" font-family="Arial">нажать на кнопку "Продолжить" или закрыть</text>
+  <text x="130" y="406" fill="#1f2440" font-size="26" font-weight="700" font-family="Arial">модальное окно</text>
+  <text x="104" y="490" fill="#6b7088" font-size="44" font-weight="700" font-family="Arial">${safeName}</text>
+  <text x="850" y="86" fill="#111" font-size="54" font-family="Arial">×</text>
   <rect x="245" y="512" width="430" height="430" fill="#fff"/>
   <image x="245" y="512" width="430" height="430" href="data:image/png;base64,${qrPngBase64}"/>
   <rect x="245" y="930" width="430" height="86" rx="14" fill="#ff7400"/>
-  <text class="f" x="322" y="986" fill="#fff" font-size="46" font-weight="700">Продолжить</text>
+  <text x="322" y="986" fill="#fff" font-size="46" font-weight="700" font-family="Arial">Продолжить</text>
 </svg>`;
 }
 
@@ -474,8 +476,16 @@ async function buildModalPngBytes({ childName, qrValue }) {
 
   const svg = buildModalSvg({ childName, qrPngBase64 });
   await ensureResvgWasm();
+  if (!arialFontBytes) {
+    arialFontBytes = base64ToBytes(ARIAL_TTF_BASE64);
+  }
   const resvg = new Resvg(svg, {
-    fitTo: { mode: 'width', value: 920 }
+    fitTo: { mode: 'width', value: 920 },
+    font: {
+      fontFiles: [arialFontBytes],
+      loadSystemFonts: false,
+      defaultFontFamily: 'Arial'
+    }
   });
   const pngData = resvg.render();
   return pngData.asPng();
