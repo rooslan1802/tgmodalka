@@ -626,7 +626,7 @@ async function countUnsigned(env, month, year) {
     byRegion.set(region, (byRegion.get(region) || 0) + unsigned.length);
   }
 
-  return { success: true, total, byRegion };
+  return { success: true, total, byRegion, meta: { month, year, sheets: totalSheets } };
 }
 
 async function handleUnsigned(env, chatId) {
@@ -642,6 +642,9 @@ async function handleUnsigned(env, chatId) {
     const skCount = byRegion.get('СКО') || byRegion.get('Северо-Казахстанская область') || 0;
     const kostCount = byRegion.get('Костанайская область') || byRegion.get('Костанайская обл.') || 0;
     const lines = [];
+    const periodLabel = res.meta?.month && res.meta?.year ? `${String(res.meta.month).padStart(2, '0')}.${res.meta.year}` : 'два последних месяца';
+    lines.push(`Период: ${periodLabel}`);
+    lines.push(`Табелей: ${res.meta?.sheets ?? '?'}`);
     lines.push(`Неподписанных всего: ${res.total}`);
     lines.push(`СКО: ${skCount}`);
     lines.push(`Костанайская область: ${kostCount}`);
