@@ -172,22 +172,24 @@ function chatStateKey(chatId) {
 
 async function loadChatState(env, chatId) {
   const raw = await env.CHILDREN_KV.get(chatStateKey(chatId));
-  if (!raw) return { paused: false, awaitingQr: false };
+  if (!raw) return { paused: false, awaitingQr: false, awaitingUnsigned: false };
   try {
     const parsed = JSON.parse(raw);
     return {
       paused: Boolean(parsed?.paused),
-      awaitingQr: Boolean(parsed?.awaitingQr)
+      awaitingQr: Boolean(parsed?.awaitingQr),
+      awaitingUnsigned: Boolean(parsed?.awaitingUnsigned)
     };
   } catch {
-    return { paused: false, awaitingQr: false };
+    return { paused: false, awaitingQr: false, awaitingUnsigned: false };
   }
 }
 
 async function saveChatState(env, chatId, state) {
   const payload = {
     paused: Boolean(state?.paused),
-    awaitingQr: Boolean(state?.awaitingQr)
+    awaitingQr: Boolean(state?.awaitingQr),
+    awaitingUnsigned: Boolean(state?.awaitingUnsigned)
   };
   await env.CHILDREN_KV.put(chatStateKey(chatId), JSON.stringify(payload));
 }
@@ -567,7 +569,7 @@ function pickRegionName(sheet) {
   );
 }
 
-async function countUnsigned(env) {
+async function countUnsigned(env, month, year) {
   const auth = await signInWithFallback({
     iin: SUPPLIER_LOGIN,
     rowPassword: SUPPLIER_PASS1,
@@ -585,17 +587,20 @@ async function countUnsigned(env) {
     'content-type': 'application/json'
   };
 
-  // берем два последних месяца: текущий и предыдущий
-  const now = new Date();
-  const periods = [];
-  periods.push({ month: now.getMonth() + 1, year: now.getFullYear() });
-  const prev = new Date(now.getFullYear(), now.getMonth() - 1, 1);
-  periods.push({ month: prev.getMonth() + 1, year: prev.getFullYear() });
-
   let sheets = [];
-  for (const p of periods) {
-    const part = await getTimeSheets(headers, 45000, p.month, p.year);
-    sheets.push(...part);
+  if (month && year) {
+    sheets = await getTimeSheets(headers, 45000, month, year);
+  } else {
+    // по умолчанию два последних месяца
+    const now = new Date();
+    const periods = [];
+    periods.push({ month: now.getMonth() + 1, year: now.getFullYear() });
+    const prev = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+    periods.push({ month: prev.getMonth() + 1, year: prev.getFullYear() });
+    for (const p of periods) {
+      const part = await getTimeSheets(headers, 45000, p.month, p.year);
+      sheets.push(...part);
+    }
   }
 
   let total = 0;
@@ -627,7 +632,8 @@ async function countUnsigned(env) {
 async function handleUnsigned(env, chatId) {
   try {
     await sendChatAction(env, chatId, 'typing').catch(() => {});
-    const res = await countUnsigned(env);
+    const state = await loadChatState(env, chatId);
+    const res = await countUnsigned(env, state?.unsignedMonth, state?.unsignedYear);
     if (!res.success) {
       await sendMessage(env, chatId, `Ошибка: ${res.message || 'не удалось подсчитать'}`, { reply_markup: buildMainKeyboard() });
       return;
@@ -682,8 +688,17 @@ async function handleMessage(env, message) {
   }
 
   if (text === 'ПРОВЕРИТЬ НЕ ПОДПИСАННЫХ') {
-    await sendMessage(env, chatId, 'Считаю неподписанных... (СКО, Костанайская обл.)', { reply_markup: buildMainKeyboard() });
-    await handleUnsigned(env, chatId);
+    const now = new Date();
+    const prev = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+    const inline_keyboard = [
+      [
+        { text: 'Текущий месяц', callback_data: `unsigned:${now.getMonth() + 1}.${now.getFullYear()}` },
+        { text: 'Прошлый месяц', callback_data: `unsigned:${prev.getMonth() + 1}.${prev.getFullYear()}` }
+      ],
+      [{ text: 'Ввести месяц вручную', callback_data: 'unsigned:manual' }]
+    ];
+    await saveChatState(env, chatId, { ...(await loadChatState(env, chatId)), awaitingUnsigned: false });
+    await sendMessage(env, chatId, 'Выберите месяц или введите вручную формат ММ.ГГГГ', { reply_markup: { inline_keyboard } });
     return;
   }
 
@@ -700,6 +715,19 @@ async function handleMessage(env, message) {
   }
 
   const state = await loadChatState(env, chatId);
+  if (state.awaitingUnsigned) {
+    const m = text.match(/^(\\d{1,2})[\\.\\/\\-](\\d{4})$/);
+    if (!m) {
+      await sendMessage(env, chatId, 'Неверный формат. Введите месяц в виде ММ.ГГГГ (например 04.2024).', { reply_markup: buildMainKeyboard() });
+      return;
+    }
+    const month = Number(m[1]);
+    const year = Number(m[2]);
+    await saveChatState(env, chatId, { ...state, awaitingUnsigned: false, unsignedMonth: month, unsignedYear: year });
+    await sendMessage(env, chatId, 'Считаю неподписанных...', { reply_markup: buildMainKeyboard() });
+    await handleUnsigned(env, chatId);
+    return;
+  }
   if (state.paused) {
     await sendMessage(env, chatId, 'Бот на паузе. Нажмите START.', { reply_markup: buildMainKeyboard() });
     return;
@@ -759,8 +787,39 @@ async function handleCallbackQuery(env, callbackQuery) {
   }
 
   if (data === 'ctrl:unsigned') {
+    await answerCallback(env, callbackId, 'Выбор месяца');
+    const now = new Date();
+    const prev = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+    const inline_keyboard = [
+      [
+        { text: 'Текущий месяц', callback_data: `unsigned:${now.getMonth() + 1}.${now.getFullYear()}` },
+        { text: 'Прошлый месяц', callback_data: `unsigned:${prev.getMonth() + 1}.${prev.getFullYear()}` }
+      ],
+      [{ text: 'Ввести вручную', callback_data: 'unsigned:manual' }]
+    ];
+    await saveChatState(env, chatId, { ...(await loadChatState(env, chatId)), awaitingUnsigned: false });
+    await sendMessage(env, chatId, 'Выберите месяц или введите вручную формат ММ.ГГГГ', { reply_markup: { inline_keyboard } });
+    return;
+  }
+
+  if (data.startsWith('unsigned:')) {
+    const value = data.split(':')[1] || '';
+    if (value === 'manual') {
+      await saveChatState(env, chatId, { ...(await loadChatState(env, chatId)), awaitingUnsigned: true });
+      await sendMessage(env, chatId, 'Введите месяц в формате ММ.ГГГГ', { reply_markup: buildMainKeyboard() });
+      await answerCallback(env, callbackId, 'Жду месяц');
+      return;
+    }
+    const m = value.match(/^(\\d{1,2})\\.(\\d{4})$/);
+    if (!m) {
+      await answerCallback(env, callbackId, 'Неверный формат');
+      return;
+    }
+    const month = Number(m[1]);
+    const year = Number(m[2]);
+    await saveChatState(env, chatId, { ...(await loadChatState(env, chatId)), awaitingUnsigned: false, unsignedMonth: month, unsignedYear: year });
     await answerCallback(env, callbackId, 'Считаю...');
-    await sendMessage(env, chatId, 'Считаю неподписанных... (СКО, Костанайская обл.)', { reply_markup: buildMainKeyboard() });
+    await sendMessage(env, chatId, 'Считаю неподписанных...', { reply_markup: buildMainKeyboard() });
     await handleUnsigned(env, chatId);
     return;
   }
