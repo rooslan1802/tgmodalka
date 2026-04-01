@@ -394,18 +394,19 @@ async function signInWithFallback({ iin, rowPassword, defaultPassword1, defaultP
   return null;
 }
 
-async function getTimeSheets(authHeaders, timeoutMs) {
+async function getTimeSheets(authHeaders, timeoutMs, month, year) {
   const pageSize = 100;
   const all = [];
   for (let page = 1; page <= 20; page += 1) {
-    const response = await apiRequest(
-      `/v1/timeSheet/Get?PageNumber=${page}&PageSize=${pageSize}&hVisitHistoryStatusIds=1`,
-      {
-        method: 'GET',
-        headers: authHeaders
-      },
-      timeoutMs
-    );
+    const params = new URLSearchParams({
+      PageNumber: String(page),
+      PageSize: String(pageSize),
+      hVisitHistoryStatusIds: '1'
+    });
+    if (month) params.set('month', String(month));
+    if (year) params.set('year', String(year));
+
+    const response = await apiRequest(`/v1/timeSheet/Get?${params.toString()}`, { method: 'GET', headers: authHeaders }, timeoutMs);
     if (!response.ok) break;
     const data = await readJson(response);
     const rows = Array.isArray(data?.data) ? data.data : [];
@@ -584,7 +585,19 @@ async function countUnsigned(env) {
     'content-type': 'application/json'
   };
 
-  const sheets = await getTimeSheets(headers, 45000);
+  // берем два последних месяца: текущий и предыдущий
+  const now = new Date();
+  const periods = [];
+  periods.push({ month: now.getMonth() + 1, year: now.getFullYear() });
+  const prev = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+  periods.push({ month: prev.getMonth() + 1, year: prev.getFullYear() });
+
+  let sheets = [];
+  for (const p of periods) {
+    const part = await getTimeSheets(headers, 45000, p.month, p.year);
+    sheets.push(...part);
+  }
+
   let total = 0;
   const byRegion = new Map();
   const totalSheets = sheets.length;
