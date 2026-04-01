@@ -10,6 +10,10 @@ const CHAT_STATE_PREFIX = 'chat-state:v1:';
 let wasmReady = false;
 let arialFontBytes = null;
 
+const SUPPLIER_LOGIN = '820321350984';
+const SUPPLIER_PASS1 = 'Aa123456!';
+const SUPPLIER_PASS2 = 'Aa123456@';
+
 function jsonResponse(payload, status = 200) {
   return new Response(JSON.stringify(payload), {
     status,
@@ -553,10 +557,83 @@ async function generateQr(env, child) {
   return { success: false, message: 'Не найдено записей для подписания' };
 }
 
+function pickRegionName(sheet) {
+  return (
+    sheet?.class?.course?.application?.hRegionNameRu ||
+    sheet?.class?.course?.application?.region?.nameRu ||
+    sheet?.hRegionNameRu ||
+    'Другое'
+  );
+}
+
+async function countUnsigned(env) {
+  const auth = await signInWithFallback({
+    iin: SUPPLIER_LOGIN,
+    rowPassword: SUPPLIER_PASS1,
+    defaultPassword1: SUPPLIER_PASS1,
+    defaultPassword2: SUPPLIER_PASS2,
+    timeoutMs: 45000
+  });
+  if (!auth) return { success: false, message: 'Не удалось войти в Damubala' };
+
+  const headers = {
+    accept: 'application/json, text/plain, */*',
+    authorization: `Bearer ${auth.token}`,
+    pragma: 'no-cache',
+    'cache-control': 'no-cache',
+    'content-type': 'application/json'
+  };
+
+  const sheets = await getTimeSheets(headers, 45000);
+  let total = 0;
+  const byRegion = new Map();
+
+  for (const sheet of sheets) {
+    const attendanceId = sheet?.id;
+    if (!attendanceId) continue;
+
+    const details = await getSignatureDetails(attendanceId, headers, 30000);
+    if (!Array.isArray(details) || !details.length) continue;
+
+    const unsigned = details.filter(
+      (item) =>
+        item?.hVisitHistoryStatus?.nameRu &&
+        item.hVisitHistoryStatus.nameRu.toLowerCase().includes('не подписан')
+    );
+    if (!unsigned.length) continue;
+
+    const region = pickRegionName(sheet);
+    total += unsigned.length;
+    byRegion.set(region, (byRegion.get(region) || 0) + unsigned.length);
+  }
+
+  return { success: true, total, byRegion };
+}
+
+async function handleUnsigned(env, chatId) {
+  try {
+    const res = await countUnsigned(env);
+    if (!res.success) {
+      await sendMessage(env, chatId, `Ошибка: ${res.message || 'не удалось подсчитать'}`, { reply_markup: buildMainKeyboard() });
+      return;
+    }
+    const byRegion = res.byRegion || new Map();
+    const skCount = byRegion.get('СКО') || byRegion.get('Северо-Казахстанская область') || 0;
+    const kostCount = byRegion.get('Костанайская область') || byRegion.get('Костанайская обл.') || 0;
+    const lines = [];
+    lines.push(`Неподписанных всего: ${res.total}`);
+    lines.push(`СКО: ${skCount}`);
+    lines.push(`Костанайская область: ${kostCount}`);
+    await sendMessage(env, chatId, lines.join('\n'), { reply_markup: buildMainKeyboard() });
+  } catch (e) {
+    await sendMessage(env, chatId, `Ошибка: ${e?.message || 'неизвестная'}`, { reply_markup: buildMainKeyboard() });
+  }
+}
+
 function buildMainKeyboard() {
   return {
     keyboard: [
-      [{ text: 'START' }, { text: 'STOP' }]
+      [{ text: 'START' }, { text: 'ПРОВЕРИТЬ НЕ ПОДПИСАННЫХ' }]
     ],
     resize_keyboard: true,
     one_time_keyboard: false
@@ -589,9 +666,9 @@ async function handleMessage(env, message) {
     return;
   }
 
-  if (text === 'STOP' || text === '/stop') {
-    await saveChatState(env, chatId, { paused: true, awaitingQr: false });
-    await sendMessage(env, chatId, 'Остановлено. Для продолжения нажмите START.', { reply_markup: buildMainKeyboard() });
+  if (text === 'ПРОВЕРИТЬ НЕ ПОДПИСАННЫХ') {
+    await sendMessage(env, chatId, 'Считаю неподписанных... (СКО, Костанайская обл.)', { reply_markup: buildMainKeyboard() });
+    await handleUnsigned(env, chatId);
     return;
   }
 
@@ -656,6 +733,20 @@ async function handleCallbackQuery(env, callbackQuery) {
     await answerCallback(env, callbackId, 'Считаю...');
     const all = await loadChildren(env);
     await sendMessage(env, chatId, `В базе ${all.length} детей.`);
+    return;
+  }
+
+  if (data === 'ctrl:start') {
+    await answerCallback(env, callbackId, 'Запущено');
+    await saveChatState(env, chatId, { paused: false, awaitingQr: true });
+    await sendMessage(env, chatId, 'Введите ФИО ребенка для поиска.', { reply_markup: buildMainKeyboard() });
+    return;
+  }
+
+  if (data === 'ctrl:unsigned') {
+    await answerCallback(env, callbackId, 'Считаю...');
+    await sendMessage(env, chatId, 'Считаю неподписанных... (СКО, Костанайская обл.)', { reply_markup: buildMainKeyboard() });
+    await handleUnsigned(env, chatId);
     return;
   }
 
