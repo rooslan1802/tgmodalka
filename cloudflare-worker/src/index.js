@@ -566,7 +566,7 @@ function pickRegionName(sheet) {
   );
 }
 
-async function countUnsigned(env, progressCb = () => {}) {
+async function countUnsigned(env) {
   const auth = await signInWithFallback({
     iin: SUPPLIER_LOGIN,
     rowPassword: SUPPLIER_PASS1,
@@ -587,13 +587,9 @@ async function countUnsigned(env, progressCb = () => {}) {
   const sheets = await getTimeSheets(headers, 45000);
   let total = 0;
   const byRegion = new Map();
-  const totalSheets = sheets.length || 0;
+  const totalSheets = sheets.length;
 
-  for (let idx = 0; idx < sheets.length; idx += 1) {
-    const sheet = sheets[idx];
-    if (totalSheets && idx % Math.max(1, Math.floor(totalSheets / 5)) === 0) {
-      progressCb(idx, totalSheets);
-    }
+  for (const sheet of sheets) {
     const attendanceId = sheet?.id;
     if (!attendanceId) continue;
 
@@ -617,10 +613,8 @@ async function countUnsigned(env, progressCb = () => {}) {
 
 async function handleUnsigned(env, chatId) {
   try {
-    const res = await countUnsigned(env, (done, total) => {
-      sendChatAction(env, chatId, 'typing').catch(() => {});
-      sendMessage(env, chatId, `Считаю... ${done}/${total || '?'} табелей`, { reply_markup: buildMainKeyboard() }).catch(() => {});
-    });
+    await sendChatAction(env, chatId, 'typing').catch(() => {});
+    const res = await countUnsigned(env);
     if (!res.success) {
       await sendMessage(env, chatId, `Ошибка: ${res.message || 'не удалось подсчитать'}`, { reply_markup: buildMainKeyboard() });
       return;
