@@ -716,7 +716,7 @@ async function handleMessage(env, message) {
 
   const state = await loadChatState(env, chatId);
   if (state.awaitingUnsigned) {
-    const m = text.match(/^(\\d{1,2})[\\.\\/\\-](\\d{4})$/);
+    const m = text.match(/^(\d{1,2})[.\-\/](\d{4})$/);
     if (!m) {
       await sendMessage(env, chatId, 'Неверный формат. Введите месяц в виде ММ.ГГГГ (например 04.2024).', { reply_markup: buildMainKeyboard() });
       return;
@@ -790,10 +790,11 @@ async function handleCallbackQuery(env, callbackQuery) {
     await answerCallback(env, callbackId, 'Выбор месяца');
     const now = new Date();
     const prev = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+    const monthName = (d) => d.toLocaleString('ru-RU', { month: 'long' });
     const inline_keyboard = [
       [
-        { text: 'Текущий месяц', callback_data: `unsigned:${now.getMonth() + 1}.${now.getFullYear()}` },
-        { text: 'Прошлый месяц', callback_data: `unsigned:${prev.getMonth() + 1}.${prev.getFullYear()}` }
+        { text: `${monthName(now)} ${now.getFullYear()}`, callback_data: `unsigned:${now.getMonth() + 1}.${now.getFullYear()}` },
+        { text: `${monthName(prev)} ${prev.getFullYear()}`, callback_data: `unsigned:${prev.getMonth() + 1}.${prev.getFullYear()}` }
       ],
       [{ text: 'Ввести вручную', callback_data: 'unsigned:manual' }]
     ];
@@ -810,7 +811,7 @@ async function handleCallbackQuery(env, callbackQuery) {
       await answerCallback(env, callbackId, 'Жду месяц');
       return;
     }
-    const m = value.match(/^(\\d{1,2})\\.(\\d{4})$/);
+    const m = value.match(/^(\d{1,2})\.(\d{4})$/);
     if (!m) {
       await answerCallback(env, callbackId, 'Неверный формат');
       return;
